@@ -65,6 +65,7 @@ I have work to do
 - **[Processes](#processes)** — Structured workflows for engineering tasks
   - [Software Development Process](docs/processes/software-development.md) — Core end-to-end workflow
 - **[Patterns](#patterns)** — Reusable solutions to common problems
+  - [Ralph Loop](docs/patterns/ralph-loop/README.md) — Autonomous agent implementation feedback loop
   - [Vertical Slicing](docs/patterns/vertical-slicing.md) — Break work into independent slices
   - [Tracer Bullets](docs/patterns/tracer-bullets.md) — Minimal end-to-end implementation
   - [Context Management](docs/patterns/context-management.md) — Provide focused information
@@ -189,6 +190,15 @@ ai-assisted-engineering-handbook/
 │   ├── processes/
 │   │   └── software-development.md — Core end-to-end workflow
 │   ├── patterns/
+│   │   ├── ralph-loop/
+│   │   │   ├── README.md — Canonical Ralph Loop pattern definition
+│   │   │   ├── examples/
+│   │   │   │   ├── bash.md — Bash/Unix implementation
+│   │   │   │   └── powershell.md — PowerShell/Windows implementation
+│   │   │   └── adapters/
+│   │   │       ├── claude.md — Claude API integration
+│   │   │       ├── copilot.md — GitHub Copilot integration
+│   │   │       └── opencode.md — OpenCode integration
 │   │   ├── vertical-slicing.md — Break work into independent slices
 │   │   ├── tracer-bullets.md — Minimal end-to-end implementation
 │   │   ├── context-management.md — Provide focused information
@@ -229,7 +239,8 @@ This handbook is under active development. The foundation has been established, 
   - Repository Exploration, Create PRD, Decompose Work, Review Implementation, Investigate Bug
 - **#5: Add Initial Skills Documentation** ✓ Complete
   - Grill Me, Write PRD, PRD to Issues (with skill maturity criteria)
-- **#6: Prove Portability With Ralph Loops** — (Planned)
+- **#6: Prove Portability With Ralph Loops** ✓ Complete
+  - Core Ralph Loop pattern with Bash/PowerShell examples and Claude/Copilot/OpenCode adapters
 - **#7: Add Authoring And Maintenance Instructions** — (Planned)
 - **#8: Record Provenance And Cross-Link The MVP** — (Planned)
 

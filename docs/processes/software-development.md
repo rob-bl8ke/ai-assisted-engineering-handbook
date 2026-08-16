@@ -278,6 +278,11 @@ This document describes the complete process from initial concept through delive
 - Commit history explaining decisions
 - Ready for review (→ Phase 5)
 
+**See Also:**
+- **[Ralph Loop Pattern](../patterns/ralph-loop/README.md)** — Canonical pattern for autonomous agent implementation loops with test-driven development
+- **[Test-Driven Development (TDD)](../patterns/test-driven-development.md)** — Testing and implementation methodology
+- **[Tracer Bullets](../patterns/tracer-bullets.md)** — Minimal end-to-end implementation strategy
+
 ### 4.3 Supervised Implementation
 
 **Approach:**
