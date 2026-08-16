@@ -310,6 +310,76 @@ Key principle: **Prefer enriching existing documentation over creating new docum
 
 ---
 
+## Maintaining and Evolving This Handbook via AI Agent
+
+This section tells you — and any AI agent working in this repo — exactly how to keep the handbook coherent as it grows.
+
+### The system map
+
+The `map/` folder is a walkable graph of every durable concept in this repo. Before making any structural change (adding a new artifact type, renaming a section, splitting or merging content), open `map/CLAUDE.md` first. It will route you to the relevant object cards and process cards so you understand what else moves when you change something.
+
+```
+map/CLAUDE.md          ← start here; routing table + name-collision table
+map/CONTEXT.md         ← universes, walk instructions, walk test checklist
+map/objects/_index.md  ← one-line status for every noun
+map/processes/         ← the three repeating workflows (deliver, author, skill-ify)
+```
+
+### How an agent should read this repo
+
+**For structural changes (adding/moving/renaming content):**
+
+1. Read `map/CLAUDE.md` — find the row in the routing table that matches your question
+2. Open the linked object or process card — read the **If you change this → Hits** section
+3. Make the change in the source file
+4. Update the map card's `status:` to `stale` if the change invalidates any card claim
+5. Run the walk test checklist in `map/CONTEXT.md`
+
+**For adding new content:**
+
+1. Run the **author** process: `map/processes/author.md`
+   - Classify → Integrate → Cross-link → Validate → Update map
+2. If you are adding a new *kind* of artifact that doesn't have an object card, create one using `map/_templates/object.md`
+3. Add a row to `map/objects/_index.md`
+
+**For answering "what is X?" or "what does changing X break?":**
+
+1. Check `map/objects/_index.md` — find the slug
+2. Open the card — read **Shape** for what it is and **If you change this** for the blast radius
+3. Follow the **See → Source** link for authoritative detail
+
+### The three processes
+
+| Process | Trigger | Entry point |
+|---|---|---|
+| **deliver** | You have a problem to solve | `map/processes/deliver.md` → `docs/processes/software-development.md` |
+| **author** | You have new knowledge to add | `map/processes/author.md` → `system/authoring/README.md` |
+| **skill-ify** | A Playbook has proven itself | `map/processes/skill-ify.md` → `docs/skills/skill-maturity-criteria.md` |
+
+### Keeping the map current
+
+The map is only useful if it reflects the actual state of the repo. Apply these rules:
+
+- **When adding a new artifact type** (a new Pattern, a new Playbook, etc.) — add an object card under the correct cluster and a row in `_index.md`
+- **When renaming a section or file** — update the `entity:` path in the relevant card and re-run the walk test
+- **When a card claim becomes stale** (source file changed) — set `status: stale` on the card immediately; re-verify before the next change that cites its **Hits** section
+- **After verifying a card** — set `status: verified` and add `verified_date: YYYY-MM-DD`
+- **Never hand-edit** `map/AGENTS.md` or `map/routing.md` — they must be byte-identical copies of `map/CLAUDE.md`. Regenerate them with: `Copy-Item map\CLAUDE.md map\AGENTS.md; Copy-Item map\CLAUDE.md map\routing.md`
+
+### Walk test (run after any structural change)
+
+Open `map/CONTEXT.md` for the full checklist. The short version:
+
+1. From `map/CLAUDE.md`, can you reach any concept within two reads?
+2. Does each card cite a source path under **See**?
+3. Does each **If you change this → Hits** name at least one downstream noun?
+4. Is any fact stored in two cards? (Link instead.)
+5. Does `map/objects/_index.md` have a row for every card that exists?
+
+If any step fails: fix the structure, not the explanation.
+
+---
+
 ## Handbook Development
 
 See the handbook's development issues in [GitHub Issues](https://github.com/rob-bl8ke/ai-assisted-engineering-handbook/issues).
