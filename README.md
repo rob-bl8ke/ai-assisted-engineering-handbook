@@ -241,25 +241,85 @@ This handbook is under active development. The foundation has been established, 
   - Grill Me, Write PRD, PRD to Issues (with skill maturity criteria)
 - **#6: Prove Portability With Ralph Loops** ✓ Complete
   - Core Ralph Loop pattern with Bash/PowerShell examples and Claude/Copilot/OpenCode adapters
-- **#7: Add Authoring And Maintenance Instructions** — (Planned)
+- **#7: Add Authoring And Maintenance Instructions** ✓ Complete
+  - AI agent instructions (AGENTS.md), classification, integration, and validation guides
 - **#8: Record Provenance And Cross-Link The MVP** — (Planned)
 
 ---
 
-## Contributing
+## Contributing to the Handbook
 
-See the handbook's development issues in GitHub Issues. The handbook is designed to evolve through:
+The handbook evolves through practical documentation and AI-assisted maintenance.
+
+### For Humans: How to Contribute
+
+1. **Identify what you want to contribute**
+   - An idea or technique you've found works
+   - A working implementation (code, script, etc.)
+   - A blog post, article, or external resource
+   - A lesson learned from your experience
+   - A new tool or approach
+
+2. **Ask an AI agent to integrate it**
+   ```
+   Please integrate this into the handbook:
+   [Your knowledge: article, code, experience, etc.]
+   
+   The agent will:
+   - Classify the knowledge
+   - Search for existing related content
+   - Update existing docs where appropriate
+   - Create new content only if needed
+   - Cross-link everything
+   - Validate the changes
+   ```
+
+3. **Review and approve the changes**
+   - The agent shows you what it changed (Git diff)
+   - You can request modifications or reject
+   - Approved changes are merged
+
+### For Humans: Knowledge Integration Process
+
+The handbook uses AI-assisted knowledge integration. When you provide new knowledge:
+
+1. **Classification** — What type is this knowledge? (Pattern? Adapter? Example? Etc.)
+2. **Search** — Does it already exist in the handbook?
+3. **Integration** — Add/update/enrich appropriate handbook documents
+4. **Cross-Linking** — Connect to related processes, patterns, concepts
+5. **Validation** — Verify structure, navigation, and quality
+
+See [system/authoring/README.md](system/authoring/README.md) for details.
+
+### For AI Agents: How to Maintain the Handbook
+
+Consult [AGENTS.md](AGENTS.md) for detailed instructions on:
+- How to classify new knowledge
+- How to integrate knowledge into the handbook
+- How to validate changes
+- When to create vs. when to enrich existing docs
+
+Key principle: **Prefer enriching existing documentation over creating new documents.**
+
+---
+
+## Handbook Development
+
+See the handbook's development issues in [GitHub Issues](https://github.com/rob-bl8ke/ai-assisted-engineering-handbook/issues).
+
+The handbook is designed to evolve through:
 
 1. Practical documentation of working approaches
 2. Gradual organization and taxonomy refinement
 3. Reuse and cross-linking to eliminate duplication
 4. AI-assisted maintenance and evolution
 
-To propose changes or additions, open an issue with:
-- Description of the engineering situation you're addressing
-- Which category (process, principle, pattern, playbook, skill, adapter, example)
-- How it relates to existing handbook concepts
-- Initial draft or reference material
+To propose changes or additions:
+
+- **For simple ideas:** Open an issue describing the engineering situation, category, and how it relates to existing concepts
+- **For implementation contributions:** Provide code, scripts, or working examples
+- **For articles/research:** Share URLs or material; ask agent to integrate
+- **For feedback:** Describe what's missing or unclear and suggest improvements
 
 ---
 
