@@ -70,6 +70,8 @@ This document describes the complete process from initial concept through delive
 
 **Activity:** Use AI-assisted inquiry to explore and align on requirements.
 
+**See Also:** [Repository Exploration Playbook](../playbooks/repository-exploration.md) — If this is about understanding an existing codebase, use this playbook to systematically gather context.
+
 **Approach:**
 - Document initial assumptions
 - Ask clarifying questions (via AI or human discussion)
@@ -128,6 +130,8 @@ This document describes the complete process from initial concept through delive
 
 **When:** For significant features, novel work, or changes affecting multiple systems.
 
+**See Also:** [Create PRD Playbook](../playbooks/create-prd.md) — Detailed step-by-step guidance on writing a complete PRD that communicates requirements clearly to both humans and AI agents.
+
 **Activity:**
 - Define the problem being solved
 - Articulate the business case or motivation
@@ -169,12 +173,13 @@ This document describes the complete process from initial concept through delive
 
 **Goal:** Break work into focused, vertically-sliced, independently-testable units.
 
-### 3.1 Identify Slices
+### 3.1 Identify Slices Using Vertical Slicing
 
 **Activity:**
 - Analyze the design
 - Identify vertical slices (end-to-end features that span all layers)
 - See [Vertical Slicing Pattern](../patterns/vertical-slicing.md) for detailed guidance on how to slice work
+- See [Decompose Work Playbook](../playbooks/decompose-work.md) for step-by-step process to convert a PRD into implementation issues
 
 **Approach:**
 - Start with the thinnest possible slice
@@ -322,6 +327,8 @@ This document describes the complete process from initial concept through delive
 
 **Activity:** Code review by a human familiar with the codebase and design.
 
+**See Also:** [Review Implementation Playbook](../playbooks/review-implementation.md) — Comprehensive guidance on systematic code review, including prioritizing bugs, risks, and test coverage.
+
 **Reviewer checks:**
 - ✓ All acceptance criteria are met
 - ✓ Code follows established patterns and conventions
@@ -341,6 +348,8 @@ This document describes the complete process from initial concept through delive
 ### 5.2 Fresh-Context Review
 
 **Activity:** Independent review by someone (preferably human) who was not involved in the implementation or prior reviews.
+
+**See Also:** [Repository Exploration Playbook](../playbooks/repository-exploration.md) — Reviewers can use this playbook to quickly understand context if unfamiliar with the codebase.
 
 **Rationale:** Fresh perspective catches:
 - Unclear assumptions
@@ -378,9 +387,11 @@ This document describes the complete process from initial concept through delive
 - Don't meet quality standards
 - Expose design flaws
 
+**See Also:** [Investigate Bug Playbook](../playbooks/investigate-bug.md) — Systematic approach to understanding root cause of bugs, from reproduction through fix and prevention.
+
 **Approach:**
 - Categorize the issue:
-  - **Implementation bug** → Return to Phase 4
+  - **Implementation bug** → Return to Phase 4; use Investigate Bug playbook for root cause analysis
   - **Design issue** → Return to Phase 2
   - **Scope change** → Create new issues (→ Phase 6.3)
   - **Requirements clarification** → Return to Phase 1

@@ -72,6 +72,11 @@ I have work to do
   - [Feedback Loops](docs/patterns/feedback-loops.md) — Learn and improve continuously
 - **[Principles](#principles)** — Core concepts and rationale
 - **[Playbooks](#playbooks)** — Step-by-step guides for specific scenarios
+  - [Repository Exploration](docs/playbooks/repository-exploration.md) — Understanding existing codebases
+  - [Create a PRD](docs/playbooks/create-prd.md) — Writing clear requirements
+  - [Decompose Work](docs/playbooks/decompose-work.md) — Breaking PRDs into implementation issues
+  - [Review Implementation](docs/playbooks/review-implementation.md) — Systematic code review
+  - [Investigate a Bug](docs/playbooks/investigate-bug.md) — Finding root causes and fixing bugs
 - **[Skills](#skills)** — Executable AI capabilities and workflows
 - **[Adapters](#adapters)** — Tool-specific implementations (Claude, Copilot, OpenCode)
 - **[Examples](#examples)** — Platform-specific demonstrations (Bash, PowerShell)
@@ -186,7 +191,12 @@ ai-assisted-engineering-handbook/
 │   │   ├── test-driven-development.md — Red → Green → Refactor
 │   │   └── feedback-loops.md — Learn and improve continuously
 │   ├── principles/ — (future) Core concepts and rationale
-│   ├── playbooks/ — (future) Step-by-step guides
+│   ├── playbooks/
+│   │   ├── repository-exploration.md — Understand existing codebases
+│   │   ├── create-prd.md — Write clear, actionable requirements
+│   │   ├── decompose-work.md — Convert PRDs into implementation issues
+│   │   ├── review-implementation.md — Review code systematically
+│   │   └── investigate-bug.md — Find and fix bugs methodically
 │   ├── skills/ — (future) Executable AI capabilities
 │   ├── adapters/ — (future) Harness-specific implementations
 │   └── examples/ — (future) Platform-specific demonstrations
@@ -206,7 +216,8 @@ This handbook is under active development. The foundation has been established, 
   - End-to-end workflow from idea through delivery and feedback
 - **#3: Add Core Patterns For The MVP Workflow** ✓ Complete
   - Vertical Slicing, Tracer Bullets, Context Management, TDD, Feedback Loops
-- **#4: Add Playbooks For Human And Agent Work** — (Next)
+- **#4: Add Playbooks For Human And Agent Work** ✓ Complete
+  - Repository Exploration, Create PRD, Decompose Work, Review Implementation, Investigate Bug
 - **#6: Prove Portability With Ralph Loops** — (Planned)
 - **#7: Add Authoring And Maintenance Instructions** — (Planned)
 - **#8: Record Provenance And Cross-Link The MVP** — (Planned)
@@ -238,4 +249,4 @@ To propose changes or additions, open an issue with:
 ---
 
 **Last Updated:** 2026-08-16  
-**Status:** Handbook Bootstrap (Navigation, Process, and Core Patterns Documented)
+**Status:** Handbook Bootstrap (Navigation, Process, Core Patterns, and Playbooks Documented)
