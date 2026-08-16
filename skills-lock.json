@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "icm-architect": {
+      "source": "RinDig/icm-architect",
+      "sourceType": "github",
+      "computedHash": "5dfa3e7f2b4ffa9636d0f93037b5cf10ab3aeeef253aefc9bb04bf4ac21abcb4"
+    },
     "setup-matt-pocock-skills": {
       "source": "mattpocock/skills",
       "sourceType": "github",
