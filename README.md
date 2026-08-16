@@ -63,8 +63,14 @@ I have work to do
 ### Quick Navigation
 
 - **[Processes](#processes)** — Structured workflows for engineering tasks
-- **[Principles](#principles)** — Core ideas behind AI-assisted approaches
+  - [Software Development Process](docs/processes/software-development.md) — Core end-to-end workflow
 - **[Patterns](#patterns)** — Reusable solutions to common problems
+  - [Vertical Slicing](docs/patterns/vertical-slicing.md) — Break work into independent slices
+  - [Tracer Bullets](docs/patterns/tracer-bullets.md) — Minimal end-to-end implementation
+  - [Context Management](docs/patterns/context-management.md) — Provide focused information
+  - [Test-Driven Development](docs/patterns/test-driven-development.md) — Red → Green → Refactor
+  - [Feedback Loops](docs/patterns/feedback-loops.md) — Learn and improve continuously
+- **[Principles](#principles)** — Core concepts and rationale
 - **[Playbooks](#playbooks)** — Step-by-step guides for specific scenarios
 - **[Skills](#skills)** — Executable AI capabilities and workflows
 - **[Adapters](#adapters)** — Tool-specific implementations (Claude, Copilot, OpenCode)
@@ -173,8 +179,13 @@ ai-assisted-engineering-handbook/
 │   ├── adr/ — (future) Architectural decision records
 │   ├── processes/
 │   │   └── software-development.md — Core end-to-end workflow
+│   ├── patterns/
+│   │   ├── vertical-slicing.md — Break work into independent slices
+│   │   ├── tracer-bullets.md — Minimal end-to-end implementation
+│   │   ├── context-management.md — Provide focused information
+│   │   ├── test-driven-development.md — Red → Green → Refactor
+│   │   └── feedback-loops.md — Learn and improve continuously
 │   ├── principles/ — (future) Core concepts and rationale
-│   ├── patterns/ — (future) Reusable solutions
 │   ├── playbooks/ — (future) Step-by-step guides
 │   ├── skills/ — (future) Executable AI capabilities
 │   ├── adapters/ — (future) Harness-specific implementations
@@ -187,13 +198,16 @@ ai-assisted-engineering-handbook/
 
 ## What's Next?
 
-This handbook is under active development. The foundation has been established, and work now focuses on formalizing key concepts:
+This handbook is under active development. The foundation has been established, with core patterns documented:
 
 - **#1: Bootstrap Handbook Navigation** ✓ Complete
   - Root navigation entry point with decision tree
 - **#2: Document The Software-Development Process** ✓ Complete
   - End-to-end workflow from idea through delivery and feedback
-- **#3: Add Core Patterns For The MVP Workflow** — (Next)
+- **#3: Add Core Patterns For The MVP Workflow** ✓ Complete
+  - Vertical Slicing, Tracer Bullets, Context Management, TDD, Feedback Loops
+- **#4: Add Playbooks For Human And Agent Work** — (Next)
+- **#6: Prove Portability With Ralph Loops** — (Planned)
 - **#7: Add Authoring And Maintenance Instructions** — (Planned)
 - **#8: Record Provenance And Cross-Link The MVP** — (Planned)
 
@@ -224,4 +238,4 @@ To propose changes or additions, open an issue with:
 ---
 
 **Last Updated:** 2026-08-16  
-**Status:** Handbook Bootstrap (Navigation and Core Process Documented)
+**Status:** Handbook Bootstrap (Navigation, Process, and Core Patterns Documented)

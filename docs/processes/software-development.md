@@ -174,16 +174,17 @@ This document describes the complete process from initial concept through delive
 **Activity:**
 - Analyze the design
 - Identify vertical slices (end-to-end features that span all layers)
-- Ensure each slice is:
-  - **Independently testable** — Can be tested in isolation
-  - **Independently reviewable** — A single person can understand it completely
-  - **Independently deployable** — Can be merged and deployed without others
-  - **Valuable** — Provides some benefit or unblocks other work
+- See [Vertical Slicing Pattern](../patterns/vertical-slicing.md) for detailed guidance on how to slice work
 
 **Approach:**
 - Start with the thinnest possible slice
 - Aim for slices small enough to complete in 1-4 hours
 - Avoid creating dependencies between slices (or make dependencies explicit)
+- Each slice should be:
+  - **Independently testable** — Can be tested in isolation
+  - **Independently reviewable** — A single person can understand it completely
+  - **Independently deployable** — Can be merged and deployed without others
+  - **Valuable** — Provides some benefit or unblocks other work
 
 **Outcomes:**
 - Ordered list of implementation issues
@@ -248,9 +249,10 @@ This document describes the complete process from initial concept through delive
   - Acceptance criteria
   - Links to relevant code and documentation
   - Definition of done
-- Agent implements the complete slice:
-  - Test-driven development (red → green → refactor)
-  - All acceptance criteria met
+- Agent implements the complete slice using:
+  - **[Test-Driven Development (TDD)](../patterns/test-driven-development.md)** — Write tests first, then code to pass them
+  - **[Tracer Bullets](../patterns/tracer-bullets.md)** — Build a minimal end-to-end path first, then refine
+  - [Test-Driven Development](../patterns/test-driven-development.md) ensures all acceptance criteria are met
   - Code follows established patterns
   - Documentation updated
 - No human intervention required unless blockers arise
@@ -561,14 +563,50 @@ Future handbook documentation will expand these variants as separate processes.
 
 ## Key Patterns Used in This Process
 
-This process incorporates several key patterns from the handbook:
+This process incorporates several key patterns from the handbook. Understanding these patterns will help you execute the process more effectively:
 
-- **Vertical Slicing** — Breaking work into independently-deployable units
-- **Test-Driven Development (TDD)** — Red → Green → Refactor approach
-- **Ralph Loops** — Unattended, autonomous AI execution with clear success criteria
-- **Fresh-Context Review** — Independent perspective on completed work
-- **Human-in-the-Loop** — Explicit decision points requiring human judgement
-- **Feedback Loops** — Continuous refinement through discovery, validation, and resolution
+### Core Patterns
+
+- **[Vertical Slicing](../patterns/vertical-slicing.md)** — Breaking work into independently-deployable units (Phase 3)
+  - Ensures parallel work
+  - Each slice is testable end-to-end
+  - Early feedback on approach
+
+- **[Tracer Bullets](../patterns/tracer-bullets.md)** — Minimal end-to-end implementation (Phase 4)
+  - Build thin paths first
+  - Add refinements incrementally
+  - Prove approach works early
+
+- **[Test-Driven Development (TDD)](../patterns/test-driven-development.md)** — Write tests first, then code (Phase 4)
+  - Red → Green → Refactor cycle
+  - Clear success criteria
+  - Confidence in correctness
+
+- **[Context Management](../patterns/context-management.md)** — Provide focused information (all phases)
+  - Give AI exactly what it needs
+  - Avoid context overload
+  - Refresh context as work progresses
+
+- **[Feedback Loops](../patterns/feedback-loops.md)** — Learn from each slice and apply improvements (all phases)
+  - Fast feedback cycles (hours, not weeks)
+  - Each slice shapes the next
+  - Continuous improvement
+
+### How Patterns Work Together
+
+```
+Vertical Slicing (how to break work)
+    ↓
+Each slice is implemented with Tracer Bullets (minimal end-to-end)
+    ↓
+Using Test-Driven Development (red → green → refactor)
+    ↓
+With Context Management (focused information)
+    ↓
+Creating Feedback Loops (learn and improve)
+    ↓
+Next slice is better informed
+```
 
 ---
 
