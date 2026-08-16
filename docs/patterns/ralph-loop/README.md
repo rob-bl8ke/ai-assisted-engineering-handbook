@@ -433,3 +433,56 @@ A successful Ralph Loop produces:
 - **[Tracer Bullets Pattern](../tracer-bullets.md)** — Building minimal end-to-end implementations
 - **[Test-Driven Development Pattern](../test-driven-development.md)** — TDD applied at larger scale
 - **[Vertical Slicing Pattern](../vertical-slicing.md)** — How features are split for Ralph Loop processing
+
+---
+
+## Sources and Provenance
+
+| Concept/Section | Source | Type | Context | Evidence |
+|---|---|---|---|---|
+| Ralph Loop Pattern | Matt Pocock | Person / Practitioner | Demonstrated effective iterative AI-assisted development cycle with Claude and Bash scripts | Community adoption, multiple independent implementations |
+| 6-Step Decision Cycle | Matt Pocock | Person / Practitioner | Core feedback loop structure for autonomous implementation | Validated through Bash and PowerShell implementations |
+| Blocker Detection | Internal Experimentation | Experiment | Identified blocker categories (compilation error, test failure, requirement ambiguity, timeout) through testing | Proven in cross-platform implementations |
+| Bash Implementation | Claude API & Unix Patterns | Documentation + Experience | Created bash.md example showing script-based Ralph Loop workflow | Working implementation with curl, git, test runners |
+| PowerShell Implementation | Windows Automation Patterns | Experience + Platform Documentation | Ported bash implementation to PowerShell maintaining functional equivalence | Working implementation with PowerShell cmdlets and Invoke-WebRequest |
+| Claude Integration Guidance | Claude API Documentation | Documentation | API patterns, model selection (claude-3-opus), context window sizing | Claude technical documentation and practical testing |
+| Copilot Integration Guidance | GitHub Copilot Documentation & VS Code | Documentation + Tool Experience | VS Code Chat integration, inline suggestions, interactive workflow | GitHub and Microsoft official documentation |
+| OpenCode Integration Guidance | OpenCode Documentation | Documentation | CLI command patterns, autonomous execution mode, acceptance criteria tracking | OpenCode tool documentation and community examples |
+| TDD Connection | Test-Driven Development Practice | Academic/Industry Practice | Identified TDD as underlying methodology within Ralph Loop red-green-refactor cycle | Established software engineering practice |
+| Feedback Loops Connection | Systems Thinking & Agile | Academic/Industry Practice | Ralph Loop as implementation of feedback loop principle in AI-assisted development | Agile methodology and systems thinking foundations |
+| Tracer Bullets Connection | Pragmatic Programmer | Published Work | First implementation should be end-to-end minimal; foundation for subsequent iterations | "The Pragmatic Programmer" by David Thomas and Andrew Hunt |
+| Vertical Slicing Connection | Agile & XP Practices | Academic/Industry Practice | Ralph Loops operate on vertically-sliced issues for clear scope and tractability | Agile and extreme programming methodologies |
+
+---
+
+## Related Concepts and Cross-Links
+
+**Patterns:**
+- [Feedback Loops](../feedback-loops.md) — Prerequisite concept: understanding iteration cycles
+- [Test-Driven Development](../test-driven-development.md) — Methodology used within Ralph Loop red-green-refactor cycle
+- [Tracer Bullets](../tracer-bullets.md) — First implementation approach within Ralph Loop (minimal end-to-end)
+- [Vertical Slicing](../vertical-slicing.md) — How work is divided for Ralph Loop processing
+
+**Processes:**
+- [Feature Development (Phase 4.2: AFK Implementation)](../../processes/software-development.md#42-afk-implementation-ralph-loop) — Where Ralph Loops are applied in practice
+
+**Playbooks:**
+- [Decompose Work](../../playbooks/decompose-work.md) — Creates the specifications that Ralph Loops consume
+- [Review Implementation](../../playbooks/review-implementation.md) — Human review step after Ralph Loop completion
+
+**Skills:**
+- [PRD to Issues](../../skills/prd-to-issues.md) — Creates specifications (vertical slices) that Ralph Loops process
+
+**Platform Implementations:**
+- [Bash Example](examples/bash.md) — Complete working Ralph Loop implementation for Linux/macOS
+- [PowerShell Example](examples/powershell.md) — Complete working Ralph Loop implementation for Windows
+
+**Harness Adapters:**
+- [Claude Adapter](adapters/claude.md) — Claude Code integration and prompt patterns
+- [Copilot Adapter](adapters/copilot.md) — GitHub Copilot VS Code Chat integration
+- [OpenCode Adapter](adapters/opencode.md) — OpenCode CLI tool integration
+
+**References:**
+- See [docs/references/README.md](../../references/README.md) for overall provenance and cross-linking strategy
+- See [docs/references/provenance.md](../../references/provenance.md) for detailed attribution guidance
+- See [docs/references/cross-links.md](../../references/cross-links.md) for complete handbook concept map

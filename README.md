@@ -85,7 +85,10 @@ I have work to do
   - [Skills Overview](docs/skills/README.md) — Complete guide to all skills and maturity criteria
 - **[Adapters](#adapters)** — Tool-specific implementations (Claude, Copilot, OpenCode)
 - **[Examples](#examples)** — Platform-specific demonstrations (Bash, PowerShell)
-- **[References](#references)** — Research and provenance
+- **[References & Provenance](#references--provenance)** — Source attribution and concept relationships
+  - [References Overview](docs/references/README.md) — Provenance and cross-linking strategy
+  - [Provenance Guide](docs/references/provenance.md) — How to record sources and attribution
+  - [Cross-Link Index](docs/references/cross-links.md) — Concept relationships and navigation
 
 ---
 
@@ -243,7 +246,11 @@ This handbook is under active development. The foundation has been established, 
   - Core Ralph Loop pattern with Bash/PowerShell examples and Claude/Copilot/OpenCode adapters
 - **#7: Add Authoring And Maintenance Instructions** ✓ Complete
   - AI agent instructions (AGENTS.md), classification, integration, and validation guides
-- **#8: Record Provenance And Cross-Link The MVP** — (Planned)
+- **#8: Record Provenance And Cross-Link The MVP** ✓ Complete
+  - Reference system with provenance and cross-linking guidelines
+  - Ralph Loop updated with sources and concept relationships
+  - Complete cross-link index for handbook coherence
+- **#9: Next Phase** — (Planning phase)
 
 ---
 
