@@ -12,42 +12,52 @@ This handbook helps you answer:
 
 Start here to find the right guidance for your engineering situation.
 
+See the **[Software Development Process](docs/processes/software-development.md)** for the complete end-to-end workflow.
+
 ```
 I have work to do
 │
 ├─ Do I understand the problem?
 │
 │  ├─ NO → Establish shared understanding
-│  │        └─ [Grill Me] — Use AI to explore and align on requirements
+│  │        └─ [Discovery Phase] — Use AI to explore and align on requirements
+│  │        └─ docs/processes/software-development.md#phase-1-discovery
 │  │
 │  └─ YES ↓
 │
 ├─ Does this require significant design?
 │
 │  ├─ YES → Create PRD
-│  │        └─ [Design Process] — Formalize requirements and approach
+│  │        └─ [Design Phase] — Formalize requirements and approach
+│  │        └─ docs/processes/software-development.md#phase-2-design
 │  │
-│  └─ NO ↓
+│  └─ NO → Lightweight work item ↓
 │
 ├─ Can the work be vertically sliced?
 │
 │  ├─ YES → Produce implementation issues
-│  │        └─ [Decomposition] — Break work into focused slices
+│  │        └─ [Decomposition Phase] — Break work into focused slices
+│  │        └─ docs/processes/software-development.md#phase-3-decomposition
 │  │
 │  └─ NO → Investigation / de-risking
-│          └─ [Risk Reduction] — Explore and validate assumptions
+│          └─ [Decomposition Rainy Path] — Resolve dependencies first
+│          └─ docs/processes/software-development.md#32-rainy-path-impossible-decomposition
 │
 ├─ Is unattended execution appropriate?
 │
 │  ├─ YES → AFK workflow
-│  │        └─ [Ralph Loop] — Autonomous AI-assisted development
+│  │        └─ [AFK Implementation] — Autonomous AI-assisted development
+│  │        └─ docs/processes/software-development.md#42-afk-implementation-ralph-loop
 │  │
 │  └─ NO → Supervised implementation
-│           └─ [Collaborative Development] — Step-by-step work with AI assistance
+│           └─ [Supervised Implementation] — Step-by-step work with AI assistance
+│           └─ docs/processes/software-development.md#43-supervised-implementation
 │
 └─ Implementation complete
    ↓
- [Review] → [Quality Assurance] → [Feedback Integration]
+ [Validation Phase] → [Resolution Phase]
+ └─ docs/processes/software-development.md#phase-5-validation
+    docs/processes/software-development.md#phase-6-resolution
 ```
 
 ### Quick Navigation
@@ -161,7 +171,8 @@ ai-assisted-engineering-handbook/
 ├── CONTEXT.md — (future) Glossary and canonical domain definitions
 ├── docs/
 │   ├── adr/ — (future) Architectural decision records
-│   ├── processes/ — (future) Major workflow documentation
+│   ├── processes/
+│   │   └── software-development.md — Core end-to-end workflow
 │   ├── principles/ — (future) Core concepts and rationale
 │   ├── patterns/ — (future) Reusable solutions
 │   ├── playbooks/ — (future) Step-by-step guides
@@ -176,11 +187,15 @@ ai-assisted-engineering-handbook/
 
 ## What's Next?
 
-This handbook is under active development. The following issues establish the foundation:
+This handbook is under active development. The foundation has been established, and work now focuses on formalizing key concepts:
 
-- **#1: Bootstrap Handbook Navigation** ← You are here
-- **#2: Document The Software-Development Process** — Define the core workflow
-- **#7: Add Authoring And Maintenance Instructions** — Guidelines for contributors
+- **#1: Bootstrap Handbook Navigation** ✓ Complete
+  - Root navigation entry point with decision tree
+- **#2: Document The Software-Development Process** ✓ Complete
+  - End-to-end workflow from idea through delivery and feedback
+- **#3: Add Core Patterns For The MVP Workflow** — (Next)
+- **#7: Add Authoring And Maintenance Instructions** — (Planned)
+- **#8: Record Provenance And Cross-Link The MVP** — (Planned)
 
 ---
 
@@ -209,4 +224,4 @@ To propose changes or additions, open an issue with:
 ---
 
 **Last Updated:** 2026-08-16  
-**Status:** Handbook Bootstrap (Foundational Navigation)
+**Status:** Handbook Bootstrap (Navigation and Core Process Documented)
