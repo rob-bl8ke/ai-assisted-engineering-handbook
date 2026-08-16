@@ -173,11 +173,7 @@ For example, a technique demonstrated with Claude and Bash is not defined by tho
 
 ### For AI Agents
 
-1. **Maintain consistent vocabulary** — use terms as defined in this handbook
-2. **Avoid duplication** — reference existing concepts rather than redefining them
-3. **Keep knowledge harness-agnostic** — separate concepts from tool implementations
-4. **Update carefully** — track changes through version control and maintain backings in issues and PRDs
-5. **Support human understanding** — ensure humans can navigate and verify your changes
+👉 **See [AGENTS.md](AGENTS.md) for complete maintenance and operational guidance.**
 
 ---
 
@@ -271,15 +267,15 @@ The handbook evolves through practical documentation and AI-assisted maintenance
    ```
    Please integrate this into the handbook:
    [Your knowledge: article, code, experience, etc.]
-   
-   The agent will:
-   - Classify the knowledge
-   - Search for existing related content
-   - Update existing docs where appropriate
-   - Create new content only if needed
-   - Cross-link everything
-   - Validate the changes
    ```
+
+   The agent follows a defined integration protocol (see [AGENTS.md](AGENTS.md)):
+   - Classifies the knowledge by type and location
+   - Searches existing docs before creating anything new
+   - Updates existing documents where appropriate
+   - Creates new content only if no suitable home exists
+   - Cross-links everything to related processes and patterns
+   - Validates structure, navigation, and consistency
 
 3. **Review and approve the changes**
    - The agent shows you what it changed (Git diff)
@@ -300,13 +296,7 @@ See [system/authoring/README.md](system/authoring/README.md) for details.
 
 ### For AI Agents: How to Maintain the Handbook
 
-Consult [AGENTS.md](AGENTS.md) for detailed instructions on:
-- How to classify new knowledge
-- How to integrate knowledge into the handbook
-- How to validate changes
-- When to create vs. when to enrich existing docs
-
-Key principle: **Prefer enriching existing documentation over creating new documents.**
+👉 **See [AGENTS.md](AGENTS.md) for complete maintenance and operational guidance.**
 
 ---
 
