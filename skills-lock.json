@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "setup-matt-pocock-skills": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "computedHash": "91a64ff6b84297fc902d5c435436f9b5783e79c3f4e7073dd9d4af9c04a4ef50"
+    },
+    "to-tickets": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "computedHash": "ae4c5c3600ca0c21e58d36734a03ef366032b2d4804f7a20171a6d2d79887d02"
+    }
+  }
+}
