@@ -1,6 +1,6 @@
 # Software Development Process
 
-The foundational end-to-end workflow for AI-assisted software engineering, based on practices pioneered by Matt Pocock and refined through community experience.
+The foundational end-to-end workflow for AI-assisted software engineering, refined through community experience and best practices.
 
 This document describes the complete process from initial concept through delivery and feedback. **Human judgement and deliberate decision points are first-class elements**, not afterthoughts.
 
@@ -633,7 +633,6 @@ Next slice is better informed
 
 ## References
 
-- **Initial inspiration:** Matt Pocock's AI-assisted software development workflow
 - **Principles:** Separation of concerns, human judgment, explicit escalation
 - **Related handbook entries:** (Future cross-links)
   - Pattern: Vertical Slicing

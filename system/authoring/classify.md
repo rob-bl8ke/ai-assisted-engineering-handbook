@@ -322,7 +322,7 @@ docs/patterns/[name]/
 - Would understanding the source help readers?
 
 **Examples:**
-- Matt Pocock's Ralph Loop blog post → Reference
+- Ralph Loop pattern documentation → Reference
 - Conference talk on tracer bullets → Reference
 - Practitioner experience with TDD → Reference
 - Academic paper on context windows → Reference

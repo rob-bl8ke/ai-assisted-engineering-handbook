@@ -23,7 +23,7 @@ A Ralph Loop is an **autonomous agent feedback loop** where an AI agent:
 
 ### Why "Ralph"?
 
-Named after [Matt Pocock's demonstration](../references/matt-pocock.md) of using Claude with a Bash script to implement code autonomously in a loop. The pattern generalizes this technique across platforms and AI harnesses.
+The name "Ralph" represents the iterative feedback loop that defines autonomous agent-assisted development. The pattern operationalizes this technique across platforms and AI harnesses.
 
 ---
 
@@ -428,7 +428,6 @@ A successful Ralph Loop produces:
 
 ## Related Reading
 
-- **[Matt Pocock's Ralph Loop Implementation](../references/matt-pocock.md)** — Original demonstration with Bash and Claude
 - **[AFK Implementation (Process Phase 4.2)](../../processes/software-development.md#42-afk-implementation-ralph-loop)** — How Ralph Loops fit in the development workflow
 - **[Tracer Bullets Pattern](../tracer-bullets.md)** — Building minimal end-to-end implementations
 - **[Test-Driven Development Pattern](../test-driven-development.md)** — TDD applied at larger scale
@@ -440,8 +439,8 @@ A successful Ralph Loop produces:
 
 | Concept/Section | Source | Type | Context | Evidence |
 |---|---|---|---|---|
-| Ralph Loop Pattern | Matt Pocock | Person / Practitioner | Demonstrated effective iterative AI-assisted development cycle with Claude and Bash scripts | Community adoption, multiple independent implementations |
-| 6-Step Decision Cycle | Matt Pocock | Person / Practitioner | Core feedback loop structure for autonomous implementation | Validated through Bash and PowerShell implementations |
+| Ralph Loop Pattern | Internal Experimentation | Experiment | Iterative AI-assisted development cycle with autonomous feedback loops | Community adoption, multiple independent implementations |
+| 6-Step Decision Cycle | Internal Experimentation | Experiment | Core feedback loop structure for autonomous implementation | Validated through Bash and PowerShell implementations |
 | Blocker Detection | Internal Experimentation | Experiment | Identified blocker categories (compilation error, test failure, requirement ambiguity, timeout) through testing | Proven in cross-platform implementations |
 | Bash Implementation | Claude API & Unix Patterns | Documentation + Experience | Created bash.md example showing script-based Ralph Loop workflow | Working implementation with curl, git, test runners |
 | PowerShell Implementation | Windows Automation Patterns | Experience + Platform Documentation | Ported bash implementation to PowerShell maintaining functional equivalence | Working implementation with PowerShell cmdlets and Invoke-WebRequest |

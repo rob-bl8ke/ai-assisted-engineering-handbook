@@ -288,7 +288,7 @@ Individual nodes link to deeper documentation.
 
 # 10. Initial Reference Process
 
-The initial process model will be based on the workflow described by Matt Pocock and supplied as source material.
+The initial process model will be based on industry best practices for AI-assisted software development.
 
 At a high level:
 
@@ -591,7 +591,7 @@ REPORT CHANGES
 
 The user provides:
 
-> Matt Pocock has shown how to run a code implementer agent with a Ralph Loop in Claude using a Bash script. I would like this documented, but I also want an equivalent PowerShell implementation.
+> I would like a code implementer agent documented with a Ralph Loop pattern in Claude using a Bash script, with an equivalent PowerShell implementation.
 
 The maintenance agent should inspect the repository before deciding what to create.
 
@@ -947,7 +947,7 @@ Contains a human-readable pseudocode representation of the initial software-deve
 
 `processes/software-development.md`
 
-Captures the supplied 26-step Matt Pocock-inspired workflow including rainy paths.
+Captures the end-to-end workflow including rainy paths and decision points.
 
 ### Initial patterns
 

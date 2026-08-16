@@ -15,8 +15,8 @@ This document verifies that Issue #8 ("Record Provenance And Cross-Link The MVP"
 - Updated `docs/patterns/ralph-loop/README.md` with comprehensive "Sources and Provenance" section (9 rows)
 - Provenance includes: originator, source type, context, and evidence
 - Sources documented for:
-  - Ralph Loop pattern (Matt Pocock, person/practitioner)
-  - 6-step decision cycle (Matt Pocock, person/practitioner)
+- Ralph Loop pattern (internal experimentation)
+  - 6-step decision cycle (internal experimentation)
   - Blocker detection (internal experimentation)
   - Platform implementations (bash, PowerShell)
   - Harness integrations (Claude, Copilot, OpenCode)

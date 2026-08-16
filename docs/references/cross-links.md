@@ -112,9 +112,6 @@ SOFTWARE DEVELOPMENT PROCESS
 │       └── Next step: Implementation (Ralph Loop)
 │
 └── REFERENCES (Source Attribution)
-    ├── Matt Pocock (Person/Practitioner)
-    │   └── Source of: Ralph Loop pattern, Feature Development process
-    │
     ├── Agile Methodology (Practice)
     │   └── Influences: Feedback Loops, Vertical Slicing, Iterative Development
     │
@@ -182,7 +179,7 @@ SOFTWARE DEVELOPMENT PROCESS
 
 #### Feature Development Process
 - [ ] **File:** `docs/processes/software-development.md`
-- [ ] **Provenance section** documents Matt Pocock and inspirations
+- [ ] **Provenance section** documents key influences and inspirations
 - [ ] **Links to patterns:**
   - [ ] Ralph Loop
   - [ ] Vertical Slicing

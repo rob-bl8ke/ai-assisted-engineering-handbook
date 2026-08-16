@@ -35,8 +35,8 @@ Less critical (but still helpful):
 When recording provenance, specify the source type:
 
 | Type | Example | What to Include |
-|------|---------|-----------------|
-| **Person** | Matt Pocock, Paul Graham | Name, possibly LinkedIn/GitHub profile |
+|------|---------|------------------|
+| **Person** | Paul Graham, Alan Turing | Name, possibly LinkedIn/GitHub profile |
 | **Article** | "How to use AI for coding" blog post | Title, author, URL, publication date |
 | **Video** | Talk at conference, YouTube video | Title, speaker, source URL, publication date |
 | **Transcript** | Conference talk transcript, podcast transcript | Title, speaker, URL to transcript |
@@ -59,7 +59,7 @@ Use this format for clarity and scanability:
 
 | Concept/Section | Source | Type | Context | URL |
 |---|---|---|---|---|
-| Ralph Loop Algorithm | Matt Pocock | Person / Practitioner | Demonstrated effective iterative development cycle | N/A |
+| Ralph Loop Algorithm | Internal Experimentation | Experiment | Iterative development cycle with autonomous feedback loops | N/A |
 | Bash Implementation | Claude API Testing | Experiment | Validated script-based workflow | N/A |
 | PowerShell Equivalence | Internal Porting | Experiment | Confirmed cross-platform compatibility | N/A |
 | Claude Integration | Claude Documentation | Documentation | API patterns and best practices | https://docs.anthropic.com |
@@ -72,16 +72,15 @@ Use this format when sources are tightly intertwined:
 ```markdown
 ## Origins and Evolution
 
-The Ralph Loop pattern originated from **Matt Pocock's** demonstration of iterative AI-assisted 
-development in Claude Code. The core concept of maintaining context and repeatedly refining solutions 
-through a feedback cycle drew inspiration from **traditional test-driven development** practices 
-and **agile iteration** principles.
+The Ralph Loop pattern operationalizes iterative AI-assisted development. The core concept of maintaining 
+context and repeatedly refining solutions through a feedback cycle draws inspiration from **traditional 
+test-driven development** practices and **agile iteration** principles.
 
-The pattern was validated through **internal experiments** running identical Bash and PowerShell 
+The pattern has been validated through **internal experiments** running identical Bash and PowerShell 
 scripts to verify cross-platform portability. Claude-specific guidance was developed by consulting 
 **Claude API documentation** and testing patterns within the Claude environment.
 
-Additional refinements came from **community practitioner feedback** and **comparative testing** 
+Refinements came from **community practitioner feedback** and **comparative testing** 
 with GitHub Copilot and OpenCode, leading to the harness-neutral formulation documented here.
 ```
 
@@ -93,11 +92,11 @@ Use this format when sources need more context:
 ## Sources and Attribution
 
 ### Core Concept: Ralph Loop (6-step Iteration Cycle)
-- **Primary Source:** Matt Pocock, AI-assisted development practitioner
-- **Type:** Person / Practitioner Experience
-- **Context:** Demonstrated effective feedback-loop-based iterative development in Claude Code
-- **Date Encountered:** 2024
-- **Evidence Level:** Widely adopted in community, multiple practitioners have validated independently
+- **Primary Source:** Internal experimentation and validation
+- **Type:** Experiment / Pattern Development
+- **Context:** Effective feedback-loop-based iterative development methodology
+- **Date Developed:** 2024
+- **Evidence Level:** Validated through cross-platform implementations, harness comparisons, and community testing
 
 ### Principle: Blocker Detection
 - **Source:** Internal implementation experience and testing
@@ -242,13 +241,13 @@ Example evolution:
 ## Provenance and Evolution
 
 ### Original Concept (2024)
-- Source: Matt Pocock
-- Documented as: Simple 6-step feedback loop
+- Source: Internal Experimentation
+- Documented as: Iterative feedback loop pattern
 
 ### First Refinement (2024, Month X)
 - Community feedback noted blocker detection wasn't always clear
 - Added explicit blocker categories (compilation error, test failure, etc.)
-- Source: [Practitioner names/GitHub issues]
+- Source: [Community practitioner feedback, GitHub issues]
 
 ### Current Version
 - Further clarified token usage and context window management

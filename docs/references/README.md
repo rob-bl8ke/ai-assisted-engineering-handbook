@@ -51,7 +51,6 @@ Example format:
 
 | Source | Type | Context | URL |
 |--------|------|---------|-----|
-| Matt Pocock | Person / Practitioner | Demonstrated Ralph Loop implementation in Claude with Bash | N/A |
 | "Coding with AI" talk | Video | Initial workflow inspiration | https://example.com/video |
 | Internal Ralph Loop experiments | Experiment | Validated Bash to PowerShell portability | N/A |
 | Claude Code documentation | Documentation | Claude-specific execution environment details | https://docs.anthropic.com |
@@ -158,7 +157,7 @@ When adding content, verify:
 ### Example 1: Ralph Loop Pattern
 
 The canonical Ralph Loop pattern document includes:
-- A "Sources" section crediting Matt Pocock and initial inspirations
+- A "Sources" section crediting key influences
 - Links to Bash and PowerShell examples
 - Links to Claude, Copilot, and OpenCode adapters
 - A link to "Feedback Loops" pattern as a prerequisite
@@ -168,7 +167,7 @@ The canonical Ralph Loop pattern document includes:
 ### Example 2: Feature Development Process
 
 The Feature Development process includes:
-- A "Sources" section crediting the initial Matt Pocock workflow
+- A "Sources" section crediting key methodology influences
 - Composition links to:
   - Create PRD Playbook
   - Vertical Slicing Pattern
