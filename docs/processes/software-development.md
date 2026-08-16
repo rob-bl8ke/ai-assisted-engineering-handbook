@@ -70,7 +70,9 @@ This document describes the complete process from initial concept through delive
 
 **Activity:** Use AI-assisted inquiry to explore and align on requirements.
 
-**See Also:** [Repository Exploration Playbook](../playbooks/repository-exploration.md) — If this is about understanding an existing codebase, use this playbook to systematically gather context.
+**See Also:**
+- [Grill Me Skill](../skills/grill-me.md) — Executable specification for the discovery conversation
+- [Repository Exploration Playbook](../playbooks/repository-exploration.md) — If this is about understanding an existing codebase, use this playbook to systematically gather context
 
 **Approach:**
 - Document initial assumptions
@@ -130,7 +132,9 @@ This document describes the complete process from initial concept through delive
 
 **When:** For significant features, novel work, or changes affecting multiple systems.
 
-**See Also:** [Create PRD Playbook](../playbooks/create-prd.md) — Detailed step-by-step guidance on writing a complete PRD that communicates requirements clearly to both humans and AI agents.
+**See Also:**
+- [Write PRD Skill](../skills/write-prd.md) — Executable specification for writing formal requirements
+- [Create PRD Playbook](../playbooks/create-prd.md) — Detailed step-by-step guidance on writing a complete PRD that communicates requirements clearly to both humans and AI agents
 
 **Activity:**
 - Define the problem being solved
@@ -179,6 +183,7 @@ This document describes the complete process from initial concept through delive
 - Analyze the design
 - Identify vertical slices (end-to-end features that span all layers)
 - See [Vertical Slicing Pattern](../patterns/vertical-slicing.md) for detailed guidance on how to slice work
+- See [PRD to Issues Skill](../skills/prd-to-issues.md) for executable specification of decomposition
 - See [Decompose Work Playbook](../playbooks/decompose-work.md) for step-by-step process to convert a PRD into implementation issues
 
 **Approach:**

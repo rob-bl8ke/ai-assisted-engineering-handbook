@@ -78,6 +78,10 @@ I have work to do
   - [Review Implementation](docs/playbooks/review-implementation.md) — Systematic code review
   - [Investigate a Bug](docs/playbooks/investigate-bug.md) — Finding root causes and fixing bugs
 - **[Skills](#skills)** — Executable AI capabilities and workflows
+  - [Grill Me](docs/skills/grill-me.md) — Establish shared understanding through discovery
+  - [Write PRD](docs/skills/write-prd.md) — Create formal product requirements
+  - [PRD to Issues](docs/skills/prd-to-issues.md) — Decompose specifications into implementation issues
+  - [Skills Overview](docs/skills/README.md) — Complete guide to all skills and maturity criteria
 - **[Adapters](#adapters)** — Tool-specific implementations (Claude, Copilot, OpenCode)
 - **[Examples](#examples)** — Platform-specific demonstrations (Bash, PowerShell)
 - **[References](#references)** — Research and provenance
@@ -197,7 +201,12 @@ ai-assisted-engineering-handbook/
 │   │   ├── decompose-work.md — Convert PRDs into implementation issues
 │   │   ├── review-implementation.md — Review code systematically
 │   │   └── investigate-bug.md — Find and fix bugs methodically
-│   ├── skills/ — (future) Executable AI capabilities
+│   ├── skills/
+│   │   ├── grill-me.md — Executable discovery specification
+│   │   ├── write-prd.md — Executable PRD writing specification
+│   │   ├── prd-to-issues.md — Executable decomposition specification
+│   │   ├── README.md — Skills overview and navigation
+│   │   └── skill-maturity-criteria.md — When playbooks become skills
 │   ├── adapters/ — (future) Harness-specific implementations
 │   └── examples/ — (future) Platform-specific demonstrations
 ├── .agents/ — AI agent customization files
@@ -218,6 +227,8 @@ This handbook is under active development. The foundation has been established, 
   - Vertical Slicing, Tracer Bullets, Context Management, TDD, Feedback Loops
 - **#4: Add Playbooks For Human And Agent Work** ✓ Complete
   - Repository Exploration, Create PRD, Decompose Work, Review Implementation, Investigate Bug
+- **#5: Add Initial Skills Documentation** ✓ Complete
+  - Grill Me, Write PRD, PRD to Issues (with skill maturity criteria)
 - **#6: Prove Portability With Ralph Loops** — (Planned)
 - **#7: Add Authoring And Maintenance Instructions** — (Planned)
 - **#8: Record Provenance And Cross-Link The MVP** — (Planned)
