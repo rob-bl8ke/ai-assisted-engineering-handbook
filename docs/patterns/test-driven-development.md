@@ -372,6 +372,7 @@ test("should save user", () => {
 
 - **[Vertical Slicing](vertical-slicing.md)** — Each slice is tested completely
 - **[Tracer Bullets](tracer-bullets.md)** — Tracer bullets have working tests that verify the approach
+- **[TDD Goal Loop](tdd-goal-loop/README.md)** — Coordinates specialized test-writer, code-writer, verifier, and evaluator agents through TDD slices
 - **[Feedback Loops](feedback-loops.md)** — Tests provide feedback that shapes next iteration
 
 ---

@@ -213,6 +213,8 @@ Vertical slicing is particularly powerful with AI agents:
 
 A well-formed vertical slice is a good target for a [Goal Loop](goal-loop/README.md): the slice has a bounded completion condition, testable behavior, and a clear Definition of Done.
 
+When the slice should be implemented test-first with specialized agents, use a [TDD Goal Loop](tdd-goal-loop/README.md) to coordinate test writing, red verification, minimal code implementation, green verification, slice verification, and final goal evaluation.
+
 The software development process uses vertical slicing in [Phase 3: Decomposition](../processes/software-development.md#phase-3-decomposition) to create issues that agents can execute independently.
 
 ---
@@ -220,6 +222,7 @@ The software development process uses vertical slicing in [Phase 3: Decompositio
 ## Related Patterns
 
 - **[Goal Loop](goal-loop/README.md)** — Prove a slice's Definition of Done with observable evidence
+- **[TDD Goal Loop](tdd-goal-loop/README.md)** — Implement a slice through coordinated red/green agent roles
 - **[Tracer Bullets](tracer-bullets.md)** — Implement each slice with minimal, end-to-end code
 - **[Feedback Loops](feedback-loops.md)** — Use feedback from each slice to guide the next
 - **[Test-Driven Development](test-driven-development.md)** — Test each slice thoroughly

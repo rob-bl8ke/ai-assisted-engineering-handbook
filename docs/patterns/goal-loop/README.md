@@ -2,7 +2,7 @@
 
 **Status:** Core Pattern  
 **Purpose:** Drive work until a stated completion condition has been demonstrated with evidence.  
-**Related Patterns:** [Vertical Slicing](../vertical-slicing.md), [Ralph Loop](../ralph-loop/README.md), [Feedback Loops](../feedback-loops.md), [Test-Driven Development](../test-driven-development.md)
+**Related Patterns:** [Vertical Slicing](../vertical-slicing.md), [Ralph Loop](../ralph-loop/README.md), [TDD Goal Loop](../tdd-goal-loop/README.md), [Feedback Loops](../feedback-loops.md), [Test-Driven Development](../test-driven-development.md)
 
 ---
 
@@ -135,6 +135,8 @@ plan -> RED -> GREEN -> review -> verify -> docs
 
 Use Ralph Loop for autonomous issue-level implementation. Use Goal Loop as the inner completion-proof mechanism when you need independent evaluation before the agent stops.
 
+When implementation should follow strict TDD with separate test-writing and code-writing roles, use [TDD Goal Loop](../tdd-goal-loop/README.md) as a specialized Goal Loop composition.
+
 ---
 
 ## Common Pitfalls
@@ -182,6 +184,7 @@ Use Ralph Loop for autonomous issue-level implementation. Use Goal Loop as the i
 **Patterns:**
 - [Vertical Slicing](../vertical-slicing.md) — Creates bounded, independently testable units that make good Goal Loop targets.
 - [Ralph Loop](../ralph-loop/README.md) — Broader autonomous implementation loop that can contain a Goal Loop.
+- [TDD Goal Loop](../tdd-goal-loop/README.md) — Specialized Goal Loop for multi-agent red/green vertical-slice implementation.
 - [Feedback Loops](../feedback-loops.md) — General feedback-loop foundation.
 - [Test-Driven Development](../test-driven-development.md) — Common verification strategy inside implementation work.
 

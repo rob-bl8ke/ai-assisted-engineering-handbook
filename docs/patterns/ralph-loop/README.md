@@ -2,7 +2,7 @@
 
 **Status:** Core Pattern  
 **Operationalizes:** [AFK Implementation (Phase 4.2)](../../processes/software-development.md#42-afk-implementation-ralph-loop)  
-**Related Patterns:** [Goal Loop](../goal-loop/README.md), [Tracer Bullets](../tracer-bullets.md), [Test-Driven Development](../test-driven-development.md), [Feedback Loops](../feedback-loops.md), [Vertical Slicing](../vertical-slicing.md)
+**Related Patterns:** [Goal Loop](../goal-loop/README.md), [TDD Goal Loop](../tdd-goal-loop/README.md), [Tracer Bullets](../tracer-bullets.md), [Test-Driven Development](../test-driven-development.md), [Feedback Loops](../feedback-loops.md), [Vertical Slicing](../vertical-slicing.md)
 
 ---
 
@@ -349,6 +349,7 @@ FUNCTION ralph_loop(issue_specification):
 ### Pattern Integration
 
 - **[Goal Loop](../goal-loop/README.md):** Inner completion-proof loop that separates implementation from independent evaluation
+- **[TDD Goal Loop](../tdd-goal-loop/README.md):** Specialized inner loop when Ralph implementation should use separate TDD agents and red/green verification
 - **[Tracer Bullets](../tracer-bullets.md):** First implementation should be end-to-end and minimal
 - **[Test-Driven Development](../test-driven-development.md):** Ralph Loop is TDD in motion
 - **[Feedback Loops](../feedback-loops.md):** Ralph Loop is a feedback loop at the implementation level
@@ -459,6 +460,7 @@ A successful Ralph Loop produces:
 
 **Patterns:**
 - [Goal Loop](../goal-loop/README.md) — Inner evidence-driven loop for proving a completion condition before stopping
+- [TDD Goal Loop](../tdd-goal-loop/README.md) — Multi-agent TDD composition for red/green vertical-slice implementation
 - [Feedback Loops](../feedback-loops.md) — Prerequisite concept: understanding iteration cycles
 - [Test-Driven Development](../test-driven-development.md) — Methodology used within Ralph Loop red-green-refactor cycle
 - [Tracer Bullets](../tracer-bullets.md) — First implementation approach within Ralph Loop (minimal end-to-end)

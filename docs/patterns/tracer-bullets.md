@@ -229,6 +229,8 @@ Tracer bullets are particularly useful with AI:
 
 The software development process uses tracer bullets implicitly in [Phase 4: Implementation](../processes/software-development.md#phase-4-implementation), particularly in the [AFK workflow](../processes/software-development.md#42-afk-implementation-ralph-loop).
 
+For agentic implementation, a [TDD Goal Loop](tdd-goal-loop/README.md) can use each tracer bullet as the next test-first behavior: write one failing test, prove it fails for the expected reason, implement the minimal end-to-end path, then verify it passes before evaluating the larger goal.
+
 ---
 
 ## Benefits
@@ -274,6 +276,7 @@ The software development process uses tracer bullets implicitly in [Phase 4: Imp
 ## Related Patterns
 
 - **[Vertical Slicing](vertical-slicing.md)** — Organize work into independent units; implement each with tracer bullets
+- **[TDD Goal Loop](tdd-goal-loop/README.md)** — Drive tracer bullets through test-first multi-agent loops
 - **[Feedback Loops](feedback-loops.md)** — Use feedback after each tracer bullet to guide refinement
 - **[Test-Driven Development](test-driven-development.md)** — Test tracer bullets to verify they work end-to-end
 

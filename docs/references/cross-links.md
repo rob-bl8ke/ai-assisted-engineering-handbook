@@ -29,14 +29,20 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Depends on: Feedback Loops
 │   │   ├── Used in: Ralph Loop, AFK Implementation
 │   │   ├── Adapters: Claude, OpenCode
-│   │   └── Related: Vertical Slicing, Test-Driven Development
+│   │   └── Related: TDD Goal Loop, Vertical Slicing, Test-Driven Development
+│   │
+│   ├── TDD Goal Loop
+│   │   ├── Depends on: Goal Loop, Test-Driven Development, Vertical Slicing, Tracer Bullets
+│   │   ├── Used in: AFK Implementation, Claude subagent orchestration
+│   │   ├── Adapters: Claude
+│   │   └── Related: Ralph Loop
 │   │
 │   ├── Ralph Loop
 │   │   ├── Depends on: Feedback Loops, Test-Driven Development
 │   │   ├── Used in: Feature Development, AFK Implementation
 │   │   ├── Examples: Bash, PowerShell
 │   │   ├── Adapters: Claude, Copilot, OpenCode
-│   │   └── Contains: Goal Loop for completion proof
+│   │   └── Contains: Goal Loop for completion proof, TDD Goal Loop for multi-agent red/green execution
 │   │
 │   ├── Vertical Slicing
 │   │   ├── Used in: Feature Development, Work Decomposition
@@ -141,15 +147,28 @@ SOFTWARE DEVELOPMENT PROCESS
 - [ ] **Links to:** Vertical Slicing pattern (good goal boundary)
 - [ ] **Links to:** Feedback Loops pattern (prerequisite)
 - [ ] **Links to:** Test-Driven Development pattern (verification strategy)
+- [ ] **Links to:** TDD Goal Loop pattern (specialized TDD composition)
 - [ ] **Links to:** Feature Development process (where used)
 - [ ] **Links to:** Claude adapter (harness-specific)
 - [ ] **Links to:** OpenCode adapter (harness-specific)
 - [ ] **Status:** ✅ Added and linked during Goal Loop integration
 
+#### TDD Goal Loop Pattern
+- [ ] **File:** `docs/patterns/tdd-goal-loop/README.md`
+- [ ] **Provenance section exists** with sources documented
+- [ ] **Links to:** Goal Loop pattern (outer completion loop)
+- [ ] **Links to:** Test-Driven Development pattern (red/green discipline)
+- [ ] **Links to:** Vertical Slicing pattern (bounded unit of work)
+- [ ] **Links to:** Tracer Bullets pattern (minimal end-to-end behavior)
+- [ ] **Links to:** Ralph Loop pattern (broader autonomous implementation loop)
+- [ ] **Links to:** Claude adapter (harness-specific)
+- [ ] **Status:** ✅ Added and linked during TDD Goal Loop integration
+
 #### Ralph Loop Pattern
 - [ ] **File:** `docs/patterns/ralph-loop/README.md`
 - [ ] **Provenance section exists** with sources documented
 - [ ] **Links to:** Goal Loop pattern (inner completion-proof loop)
+- [ ] **Links to:** TDD Goal Loop pattern (specialized inner TDD loop)
 - [ ] **Links to:** Feedback Loops pattern (prerequisite)
 - [ ] **Links to:** Test-Driven Development pattern (prerequisite)
 - [ ] **Links to:** Feature Development process (where used)
