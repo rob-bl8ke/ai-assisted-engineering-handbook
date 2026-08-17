@@ -29,6 +29,7 @@ Use a Goal Loop when:
 - You want the agent to continue after partial progress rather than stop after the first plausible implementation.
 - You need a smaller completion-proof loop inside a broader workflow such as [Ralph Loop](../ralph-loop/README.md).
 - The unit of work is a [vertical slice](../vertical-slicing.md) with bounded scope and independently testable behavior.
+- The unit of work is a GitHub issue with acceptance criteria, a Definition of Done, and stated verification commands.
 
 Do not use a Goal Loop when:
 
@@ -156,6 +157,12 @@ Use Ralph Loop for autonomous issue-level implementation. Use Goal Loop as the i
 
 **Prevention:** Define completion conditions before starting. If they cannot be defined, return to discovery or design.
 
+### Pitfall 4: Issue Without Verifiable Evidence
+
+**Problem:** A GitHub issue describes desired work but does not say how completion should be proven.
+
+**Prevention:** Convert the issue into a Goal Loop target only when it has explicit acceptance criteria and checks, such as tests passing, a build succeeding, documentation updated, or a checklist satisfied.
+
 ---
 
 ## Sources and Provenance
@@ -163,6 +170,8 @@ Use Ralph Loop for autonomous issue-level implementation. Use Goal Loop as the i
 | Concept/Section | Source | Type | Context | Evidence |
 |---|---|---|---|---|
 | Goal Loop Pattern | Internal synthesis from `content.md` | Conversation / design note | Identified `/goal` as a reusable completion-proof loop separate from harness implementations | Integrated as canonical pattern with OpenCode and Claude mappings |
+| Claude Code `/goal` | Claude Code documentation | Documentation | Native `/goal` behavior: session-scoped completion condition, evaluator verdicts, verifiable end states, auto-mode relationship, and non-interactive use | https://code.claude.com/docs/en/goal |
+| Claude Code role orchestration | Claude Code subagents and hooks documentation | Documentation | Custom subagents can express executor/verifier/evaluator roles inside `/goal`; Stop hooks, agent hooks, or external controllers are needed when custom evaluator output must control continuation | https://code.claude.com/docs/en/sub-agents; https://code.claude.com/docs/en/hooks-guide; https://code.claude.com/docs/en/hooks |
 | OpenCode command mapping | OpenCode Documentation | Documentation | Project commands, agents, server/API, and custom tools | See OpenCode command and adapter references |
 | Actor/Judge separation | Internal AI-assisted engineering practice | Principle / pattern | Completion should be evaluated independently from implementation | Reflected in evaluator role and outcomes |
 

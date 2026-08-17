@@ -135,6 +135,8 @@ SOFTWARE DEVELOPMENT PROCESS
 #### Goal Loop Pattern
 - [ ] **File:** `docs/patterns/goal-loop/README.md`
 - [ ] **Provenance section exists** with sources documented
+- [ ] **Source note:** Claude Code `/goal` documentation added as native-harness provenance
+- [ ] **Adapter note:** Claude adapter documents subagent role orchestration and stronger hook/controller options
 - [ ] **Links to:** Ralph Loop pattern (contains/uses)
 - [ ] **Links to:** Vertical Slicing pattern (good goal boundary)
 - [ ] **Links to:** Feedback Loops pattern (prerequisite)
