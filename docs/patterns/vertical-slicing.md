@@ -211,12 +211,15 @@ Vertical slicing is particularly powerful with AI agents:
 3. **Testability:** Success criteria are unambiguous and automatable
 4. **Feedback Integration:** Agent can read feedback from previous slice and adapt
 
+A well-formed vertical slice is a good target for a [Goal Loop](goal-loop/README.md): the slice has a bounded completion condition, testable behavior, and a clear Definition of Done.
+
 The software development process uses vertical slicing in [Phase 3: Decomposition](../processes/software-development.md#phase-3-decomposition) to create issues that agents can execute independently.
 
 ---
 
 ## Related Patterns
 
+- **[Goal Loop](goal-loop/README.md)** — Prove a slice's Definition of Done with observable evidence
 - **[Tracer Bullets](tracer-bullets.md)** — Implement each slice with minimal, end-to-end code
 - **[Feedback Loops](feedback-loops.md)** — Use feedback from each slice to guide the next
 - **[Test-Driven Development](test-driven-development.md)** — Test each slice thoroughly

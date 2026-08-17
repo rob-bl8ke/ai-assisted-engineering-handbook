@@ -260,6 +260,7 @@ This document describes the complete process from initial concept through delive
   - Links to relevant code and documentation
   - Definition of done
 - Agent implements the complete slice using:
+  - **[Goal Loop](../patterns/goal-loop/README.md)** — Continue until the Definition of Done is demonstrated by evidence
   - **[Test-Driven Development (TDD)](../patterns/test-driven-development.md)** — Write tests first, then code to pass them
   - **[Tracer Bullets](../patterns/tracer-bullets.md)** — Build a minimal end-to-end path first, then refine
   - [Test-Driven Development](../patterns/test-driven-development.md) ensures all acceptance criteria are met
@@ -280,6 +281,7 @@ This document describes the complete process from initial concept through delive
 
 **See Also:**
 - **[Ralph Loop Pattern](../patterns/ralph-loop/README.md)** — Canonical pattern for autonomous agent implementation loops with test-driven development
+- **[Goal Loop Pattern](../patterns/goal-loop/README.md)** — Evidence-driven completion loop with independent evaluation
 - **[Test-Driven Development (TDD)](../patterns/test-driven-development.md)** — Testing and implementation methodology
 - **[Tracer Bullets](../patterns/tracer-bullets.md)** — Minimal end-to-end implementation strategy
 
@@ -613,6 +615,11 @@ This process incorporates several key patterns from the handbook. Understanding 
   - Each slice shapes the next
   - Continuous improvement
 
+- **[Goal Loop](../patterns/goal-loop/README.md)** — Prove a completion condition before stopping (Phase 4)
+  - Separates executor from evaluator
+  - Requires observable evidence
+  - Prevents premature completion claims
+
 ### How Patterns Work Together
 
 ```
@@ -623,6 +630,8 @@ Each slice is implemented with Tracer Bullets (minimal end-to-end)
 Using Test-Driven Development (red → green → refactor)
     ↓
 With Context Management (focused information)
+    ↓
+Goal Loop proves completion of the current unit
     ↓
 Creating Feedback Loops (learn and improve)
     ↓

@@ -65,6 +65,7 @@ I have work to do
 - **[Processes](#processes)** — Structured workflows for engineering tasks
   - [Software Development Process](docs/processes/software-development.md) — Core end-to-end workflow
 - **[Patterns](#patterns)** — Reusable solutions to common problems
+  - [Goal Loop](docs/patterns/goal-loop/README.md) — Evidence-driven completion loop with independent evaluation
   - [Ralph Loop](docs/patterns/ralph-loop/README.md) — Autonomous agent implementation feedback loop
   - [Vertical Slicing](docs/patterns/vertical-slicing.md) — Break work into independent slices
   - [Tracer Bullets](docs/patterns/tracer-bullets.md) — Minimal end-to-end implementation
@@ -189,6 +190,11 @@ ai-assisted-engineering-handbook/
 │   ├── processes/
 │   │   └── software-development.md — Core end-to-end workflow
 │   ├── patterns/
+│   │   ├── goal-loop/
+│   │   │   ├── README.md — Canonical Goal Loop pattern definition
+│   │   │   └── adapters/
+│   │   │       ├── claude.md — Claude Code /goal mapping
+│   │   │       └── opencode.md — OpenCode command and evaluator mapping
 │   │   ├── ralph-loop/
 │   │   │   ├── README.md — Canonical Ralph Loop pattern definition
 │   │   │   ├── examples/

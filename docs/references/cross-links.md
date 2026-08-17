@@ -25,15 +25,22 @@ SOFTWARE DEVELOPMENT PROCESS
 │   └── Separation of Orchestration and Exploration
 │
 ├── PATTERNS (Reusable Techniques)
+│   ├── Goal Loop
+│   │   ├── Depends on: Feedback Loops
+│   │   ├── Used in: Ralph Loop, AFK Implementation
+│   │   ├── Adapters: Claude, OpenCode
+│   │   └── Related: Vertical Slicing, Test-Driven Development
+│   │
 │   ├── Ralph Loop
 │   │   ├── Depends on: Feedback Loops, Test-Driven Development
 │   │   ├── Used in: Feature Development, AFK Implementation
 │   │   ├── Examples: Bash, PowerShell
-│   │   └── Adapters: Claude, Copilot, OpenCode
+│   │   ├── Adapters: Claude, Copilot, OpenCode
+│   │   └── Contains: Goal Loop for completion proof
 │   │
 │   ├── Vertical Slicing
 │   │   ├── Used in: Feature Development, Work Decomposition
-│   │   └── Related: Tracer Bullets, Feedback Loops
+│   │   └── Related: Goal Loop, Tracer Bullets, Feedback Loops
 │   │
 │   ├── Test-Driven Development
 │   │   ├── Part of: Ralph Loop, Feature Development
@@ -125,9 +132,22 @@ SOFTWARE DEVELOPMENT PROCESS
 
 ### Patterns
 
+#### Goal Loop Pattern
+- [ ] **File:** `docs/patterns/goal-loop/README.md`
+- [ ] **Provenance section exists** with sources documented
+- [ ] **Links to:** Ralph Loop pattern (contains/uses)
+- [ ] **Links to:** Vertical Slicing pattern (good goal boundary)
+- [ ] **Links to:** Feedback Loops pattern (prerequisite)
+- [ ] **Links to:** Test-Driven Development pattern (verification strategy)
+- [ ] **Links to:** Feature Development process (where used)
+- [ ] **Links to:** Claude adapter (harness-specific)
+- [ ] **Links to:** OpenCode adapter (harness-specific)
+- [ ] **Status:** ✅ Added and linked during Goal Loop integration
+
 #### Ralph Loop Pattern
 - [ ] **File:** `docs/patterns/ralph-loop/README.md`
 - [ ] **Provenance section exists** with sources documented
+- [ ] **Links to:** Goal Loop pattern (inner completion-proof loop)
 - [ ] **Links to:** Feedback Loops pattern (prerequisite)
 - [ ] **Links to:** Test-Driven Development pattern (prerequisite)
 - [ ] **Links to:** Feature Development process (where used)
@@ -144,6 +164,7 @@ SOFTWARE DEVELOPMENT PROCESS
 - [ ] **Links to:** Feature Development process
 - [ ] **Links to:** Decompose Work playbook
 - [ ] **Links to:** Tracer Bullets pattern (related)
+- [ ] **Links to:** Goal Loop pattern (related)
 - [ ] **Links to:** Feedback Loops pattern (related)
 - [ ] **Status:** ⚠️ Needs verification
 
@@ -181,6 +202,7 @@ SOFTWARE DEVELOPMENT PROCESS
 - [ ] **File:** `docs/processes/software-development.md`
 - [ ] **Provenance section** documents key influences and inspirations
 - [ ] **Links to patterns:**
+  - [ ] Goal Loop
   - [ ] Ralph Loop
   - [ ] Vertical Slicing
   - [ ] Test-Driven Development
@@ -304,7 +326,7 @@ SOFTWARE DEVELOPMENT PROCESS
 
 | Category | Total | Complete | Needs Update | Status |
 |----------|-------|----------|--------------|--------|
-| Patterns | 6 | 1 | 5 | ⚠️ In Progress |
+| Patterns | 7 | 2 | 5 | ⚠️ In Progress |
 | Processes | 1 | 0 | 1 | ⚠️ Needs Update |
 | Playbooks | 5 | 0 | 5 | ⚠️ Needs Update |
 | Skills | 3 | 0 | 3 | ⚠️ Needs Update |
