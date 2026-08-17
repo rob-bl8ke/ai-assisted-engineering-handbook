@@ -547,7 +547,7 @@ This process succeeds because it identifies **explicit decision points** where h
 
 ## Linking Back to Root Navigation
 
-This process is introduced in the root [README.md](../README.md) via the "Getting Started" decision tree:
+This process is introduced in the root [README.md](../../README.md) via the "Getting Started" decision tree:
 
 ```
 I have work to do
