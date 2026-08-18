@@ -90,6 +90,7 @@ I have work to do
 - **[Examples](#examples)** — Platform-specific demonstrations (Bash, PowerShell)
 - **[References & Provenance](#references--provenance)** — Source attribution and concept relationships
   - [References Overview](docs/references/README.md) — Provenance and cross-linking strategy
+  - [Repository Mental Model Tools](docs/references/repository-mental-model-tools.md) — Codebase graph, documentation, and code-intelligence tool ecosystem
   - [Provenance Guide](docs/references/provenance.md) — How to record sources and attribution
   - [Cross-Link Index](docs/references/cross-links.md) — Concept relationships and navigation
 

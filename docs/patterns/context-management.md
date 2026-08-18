@@ -15,6 +15,8 @@ Context management is about intentionally deciding:
 
 Good context management means the AI can work effectively without wasting LLM tokens on irrelevant information.
 
+For large repositories, [Repository Mental Model Tools](../references/repository-mental-model-tools.md) can support this pattern by selecting relevant structural context: callers, dependencies, affected symbols, architecture relationships, and cross-artifact links.
+
 ---
 
 ## Why Context Management Matters

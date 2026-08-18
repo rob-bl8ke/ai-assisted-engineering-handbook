@@ -16,6 +16,8 @@ This playbook provides a systematic approach to understanding an unfamiliar repo
 
 This playbook applies the [Context Management Pattern](../patterns/context-management.md) to systematically gather and organize information. Avoid both context overload (gathering everything) and context underload (missing critical information).
 
+For large repositories, consider using [Repository Mental Model Tools](../references/repository-mental-model-tools.md) to precompute or query architecture, dependencies, symbol relationships, and cross-artifact links before manually exploring files. These tools do not replace exploration judgement; they reduce repeated rediscovery.
+
 ---
 
 ## Phase 1: High-Level Architecture (15-30 minutes)

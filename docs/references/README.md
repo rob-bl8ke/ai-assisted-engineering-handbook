@@ -58,6 +58,10 @@ Example format:
 
 See [provenance.md](provenance.md) for detailed guidance.
 
+## Tool Ecosystem References
+
+- [Repository Mental Model Tools](repository-mental-model-tools.md) - MCP, AGENTS.md, Serena, code-review-graph, Graphify, Sense, Codebase-Memory, and related tools for portable repository context and code intelligence
+
 ## Cross-Linking Strategy
 
 Handbook concepts frequently build on or relate to one another. Rather than duplicating explanations, concepts should link to related knowledge.

@@ -64,6 +64,7 @@ SOFTWARE DEVELOPMENT PROCESS
 │   └── Context Management
 │       ├── Related: Context Economy principle
 │       ├── Used in: Repository Exploration, Ralph Loop
+│       ├── Supported by: Repository Mental Model Tools
 │       └── Critical for: Token efficiency, LLM prompting
 │
 ├── PROCESSES (End-to-End Workflows)
@@ -92,6 +93,7 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Prerequisite for: Feature Development, Bug Investigation
 │   │   ├── Supports: Context Economy principle
 │   │   ├── Uses: Code search, file navigation, dependency analysis
+│   │   ├── Can be accelerated by: Repository Mental Model Tools
 │   │   └── Alternative: Asking for architecture overview
 │   │
 │   ├── Review Implementation
@@ -146,6 +148,13 @@ SOFTWARE DEVELOPMENT PROCESS
     │
     ├── Test-Driven Development (Academic/Industry Practice)
     │   └── Influences: TDD pattern, Ralph Loop cycle
+    │
+    ├── Repository Mental Model Tools
+    │   ├── Supports: Repository Exploration
+    │   ├── Supports: Context Management
+    │   ├── Prioritizes: MCP, AGENTS.md, skills, token efficiency, multi-agent portability
+    │   ├── Categories: Human learning, Agent context, Code intelligence
+    │   └── Examples: Serena, code-review-graph, Graphify, Sense, Understand Anything, Understand Everything, Codebase-Memory, CodeGraph
     │
     └── [Additional sources documented in each concept's Provenance section]
 ```
@@ -378,6 +387,15 @@ SOFTWARE DEVELOPMENT PROCESS
 - [ ] **Purpose:** Overview of provenance and cross-linking
 - [ ] **Linked from:** Main README.md
 - [ ] **Status:** ✅ Created for Issue #8
+
+#### Repository Mental Model Tools
+- [x] **File:** `docs/references/repository-mental-model-tools.md`
+- [x] **Provenance section** documents source
+- [x] **Links to:** Repository Exploration playbook
+- [x] **Links to:** Context Management pattern
+- [x] **Links to:** Grill With Docs and Ralph Loop as related practices
+- [x] **Documents:** MCP, AGENTS.md, skills, Serena, code-review-graph, Graphify, Sense, Understand Anything, Understand Everything, Codebase-Memory, CodeGraph, DeepWiki-style tools
+- [x] **Status:** ✅ Verified
 
 ## Cross-Link Status Summary
 
