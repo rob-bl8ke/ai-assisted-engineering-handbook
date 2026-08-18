@@ -61,6 +61,12 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Related: Vertical Slicing
 │   │   └── Use in: Feature Development, Risk Mitigation
 │   │
+│   ├── Unified Agent Workspace
+│   │   ├── Supports: Multi-repo agentic engineering
+│   │   ├── Related: Context Management, Repository Exploration
+│   │   ├── Supported by: Repository Mental Model Tools
+│   │   └── Informed by: GitHub MultiRepoOps and CentralRepoOps
+│   │
 │   └── Context Management
 │       ├── Related: Context Economy principle
 │       ├── Used in: Repository Exploration, Ralph Loop
@@ -242,6 +248,16 @@ SOFTWARE DEVELOPMENT PROCESS
 - [ ] **Links to:** Repository Exploration playbook
 - [ ] **Status:** ⚠️ Needs verification
 
+#### Unified Agent Workspace Pattern
+- [x] **File:** `docs/patterns/unified-agent-workspace.md`
+- [x] **Provenance section** documents source
+- [x] **Links to:** Context Management pattern
+- [x] **Links to:** Repository Exploration playbook
+- [x] **Links to:** Repository Mental Model Tools reference
+- [x] **Links to:** Grill With Docs skill
+- [x] **Documents:** virtual monorepo, developer-control-plane repository, service-local vs ecosystem truth, remote automation control plane, scoped workers, downstream change propagation, three levels of truth, `system.yaml`, generated engineering indexes
+- [x] **Status:** ✅ Verified
+
 ### Processes
 
 #### Feature Development Process
@@ -401,12 +417,12 @@ SOFTWARE DEVELOPMENT PROCESS
 
 | Category | Total | Complete | Needs Update | Status |
 |----------|-------|----------|--------------|--------|
-| Patterns | 7 | 2 | 5 | ⚠️ In Progress |
+| Patterns | 8 | 3 | 5 | ⚠️ In Progress |
 | Processes | 1 | 0 | 1 | ⚠️ Needs Update |
 | Playbooks | 5 | 0 | 5 | ⚠️ Needs Update |
 | Skills | 3 | 0 | 3 | ⚠️ Needs Update |
 | Principles | 2+ | 0 | 2+ | ⚠️ Needs Update |
-| References | 3 | 3 | 0 | ✅ Complete |
+| References | 4 | 4 | 0 | ✅ Complete |
 
 **Overall MVP Status:** ~70% complete (Reference system created, existing concepts need cross-links and provenance)
 

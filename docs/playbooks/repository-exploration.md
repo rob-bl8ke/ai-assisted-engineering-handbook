@@ -18,6 +18,8 @@ This playbook applies the [Context Management Pattern](../patterns/context-manag
 
 For large repositories, consider using [Repository Mental Model Tools](../references/repository-mental-model-tools.md) to precompute or query architecture, dependencies, symbol relationships, and cross-artifact links before manually exploring files. These tools do not replace exploration judgement; they reduce repeated rediscovery.
 
+For multi-repository systems, use the [Unified Agent Workspace](../patterns/unified-agent-workspace.md) pattern to give agents one navigable workspace while preserving independent Git repositories and local service instructions.
+
 ---
 
 ## Phase 1: High-Level Architecture (15-30 minutes)

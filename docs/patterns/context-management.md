@@ -17,6 +17,8 @@ Good context management means the AI can work effectively without wasting LLM to
 
 For large repositories, [Repository Mental Model Tools](../references/repository-mental-model-tools.md) can support this pattern by selecting relevant structural context: callers, dependencies, affected symbols, architecture relationships, and cross-artifact links.
 
+For multi-repository systems, the [Unified Agent Workspace](unified-agent-workspace.md) pattern creates a shared filesystem boundary, instructions layer, and engineering index so agents can manage context across independently versioned repositories.
+
 ---
 
 ## Why Context Management Matters

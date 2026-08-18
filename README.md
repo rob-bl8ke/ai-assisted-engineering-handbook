@@ -70,6 +70,7 @@ I have work to do
   - [Ralph Loop](docs/patterns/ralph-loop/README.md) — Autonomous agent implementation feedback loop
   - [Vertical Slicing](docs/patterns/vertical-slicing.md) — Break work into independent slices
   - [Tracer Bullets](docs/patterns/tracer-bullets.md) — Minimal end-to-end implementation
+  - [Unified Agent Workspace](docs/patterns/unified-agent-workspace.md) — Virtual monorepo for multi-repo agentic engineering
   - [Context Management](docs/patterns/context-management.md) — Provide focused information
   - [Test-Driven Development](docs/patterns/test-driven-development.md) — Red → Green → Refactor
   - [Feedback Loops](docs/patterns/feedback-loops.md) — Learn and improve continuously
@@ -209,6 +210,7 @@ ai-assisted-engineering-handbook/
 │   │   │       └── opencode.md — OpenCode integration
 │   │   ├── vertical-slicing.md — Break work into independent slices
 │   │   ├── tracer-bullets.md — Minimal end-to-end implementation
+│   │   ├── unified-agent-workspace.md — Virtual monorepo for multi-repo agentic engineering
 │   │   ├── context-management.md — Provide focused information
 │   │   ├── test-driven-development.md — Red → Green → Refactor
 │   │   └── feedback-loops.md — Learn and improve continuously

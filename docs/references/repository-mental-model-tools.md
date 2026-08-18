@@ -268,6 +268,7 @@ The optimization target is not maximum standalone model intelligence. It is usef
 
 - [Repository Exploration](../playbooks/repository-exploration.md): these tools can accelerate module mapping, dependency discovery, and architecture exploration.
 - [Context Management](../patterns/context-management.md): these tools help select the small subset of repository context relevant to the task.
+- [Unified Agent Workspace](../patterns/unified-agent-workspace.md): these tools can provide the shared code intelligence layer for a virtual monorepo or developer-control-plane repository.
 - [Grill With Docs](../skills/grill-with-docs.md): repository graphs and code intelligence can supply facts during grilling so the user only needs to make decisions.
 - [Ralph Loop](../patterns/ralph-loop/README.md): implementation loops benefit when each iteration can retrieve precise affected code rather than rereading broad repository context.
 
