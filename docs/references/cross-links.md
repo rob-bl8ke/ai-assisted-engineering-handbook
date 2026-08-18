@@ -108,8 +108,16 @@ SOFTWARE DEVELOPMENT PROCESS
 ├── SKILLS (Executable Capabilities)
 │   ├── Grill Me
 │   │   ├── Used in: Feature Development (shared understanding phase)
+│   │   ├── Based on: Matt Pocock grilling technique
 │   │   ├── Output: Shared design concept
+│   │   ├── Engineering extension: Grill With Docs
 │   │   └── Next step: Write PRD
+│   │
+│   ├── Grill With Docs
+│   │   ├── Builds on: Grill Me
+│   │   ├── Uses: Domain Docs
+│   │   ├── Related: Domain modeling / ubiquitous language
+│   │   └── Output: Shared understanding plus glossary and ADR updates
 │   │
 │   ├── Write PRD
 │   │   ├── Used in: Feature Development Process
@@ -285,9 +293,19 @@ SOFTWARE DEVELOPMENT PROCESS
 
 #### Grill Me Skill
 - [ ] **File:** `docs/skills/grill-me.md`
-- [ ] **Provenance section** documents source
+- [x] **Provenance section** documents source
 - [ ] **Links to:** Feature Development process
 - [ ] **Links to:** Write PRD skill (next step)
+- [x] **Links to:** Matt Pocock `grilling`, `grill-me`, and `grill-with-docs` source skills
+- [x] **Links to:** Grill With Docs skill and Domain Docs
+- [ ] **Status:** ⚠️ Needs verification
+
+#### Grill With Docs Skill
+- [x] **File:** `docs/skills/grill-with-docs.md`
+- [x] **Provenance section** documents source
+- [x] **Links to:** Grill Me skill (base behavior)
+- [x] **Links to:** Domain Docs (glossary and ADR conventions)
+- [x] **Links to:** Matt Pocock `grill-with-docs` and `domain-modeling` source skills
 - [ ] **Status:** ⚠️ Needs verification
 
 #### Write PRD Skill

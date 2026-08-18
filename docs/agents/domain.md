@@ -1,6 +1,8 @@
 # Domain Docs
 
-How the engineering skills should consume this repo's domain documentation when exploring the codebase.
+How engineering skills should consume and maintain a repo's domain documentation when exploring the codebase.
+
+These conventions support [Grill With Docs](../skills/grill-with-docs.md), which combines [Grill Me](../skills/grill-me.md) with lightweight Domain-Driven Design. The goal is a shared ubiquitous language that both humans and agents use consistently.
 
 ## Before exploring, read these
 
@@ -44,8 +46,24 @@ When your output names a domain concept (in an issue title, a refactor proposal,
 
 If the concept you need isn't in the glossary yet, that's a signal -- either you're inventing language the project doesn't use (reconsider) or there's a real gap (note it for `/domain-modeling`).
 
+## Maintain docs only when knowledge crystallizes
+
+During grilling, update domain docs when the conversation resolves a term or a durable decision:
+
+- Add or refine `CONTEXT.md` entries when domain terms become precise.
+- Create or update ADRs only for decisions that are hard to reverse, surprising without context, and the result of a real trade-off.
+- Keep `CONTEXT.md` implementation-free; it is a glossary, not a specification or scratch pad.
+- Separate facts discovered from code/docs from decisions made by the user.
+
 ## Flag ADR conflicts
 
 If your output contradicts an existing ADR, surface it explicitly rather than silently overriding:
 
 > _Contradicts ADR-0007 (event-sourced orders) -- but worth reopening because..._
+
+## Sources and Provenance
+
+| Concept/Section | Source | Type | Context | URL |
+|---|---|---|---|---|
+| Domain docs during grilling | Matt Pocock `domain-modeling` skill | Tool/Repository | Active glossary and ADR discipline during engineering design conversations | https://github.com/mattpocock/skills/blob/main/skills/engineering/domain-modeling/SKILL.md |
+| Skill composition | Matt Pocock `grill-with-docs` skill | Tool/Repository | Combines `grilling` and `domain-modeling` | https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md |

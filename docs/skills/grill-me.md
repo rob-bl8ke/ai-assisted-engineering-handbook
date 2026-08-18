@@ -10,6 +10,13 @@
 
 **Detailed How-To:** [Repository Exploration Playbook](../playbooks/repository-exploration.md) (for understanding existing context) and Phase 1.2 of the process
 
+**Reference Technique:** This skill is based on Matt Pocock's `grilling` technique, where the agent builds a design tree, separates facts from user decisions, and does not proceed until shared understanding is confirmed.
+
+**External References:**
+- [Matt Pocock: grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md) - canonical interrogation technique
+- [Matt Pocock: grill-me](https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md) - wrapper skill that invokes grilling
+- [Matt Pocock: grill-with-docs](https://github.com/mattpocock/skills/blob/main/skills/engineering/grill-with-docs/SKILL.md) - engineering variant that combines grilling with domain modeling
+
 ---
 
 ## Canonical Skill Behavior
@@ -20,6 +27,18 @@ You have:
 - An initial idea, feature request, or problem statement
 - Access to stakeholders, product owners, or domain experts (human or via context)
 - Context about the existing codebase or system (if applicable)
+
+### Grilling Discipline
+
+Use a design tree to model the conversation. Each settled answer unlocks the next decision or fact to investigate.
+
+**Facts are discovered by the agent.** If the answer can be found in the codebase, documentation, issue tracker, filesystem, or available tools, investigate it instead of asking the user.
+
+**Decisions belong to the user.** Ask for a decision only when the available facts are insufficient or when there are real trade-offs the user must choose between.
+
+**Ask one question at a time.** Multiple questions in one turn are hard to answer and often cause unclear decisions. Ask the next highest-leverage question, wait for the answer, then recompute the design tree.
+
+**Do not enact the plan until confirmation.** When the tree appears complete, summarize the shared understanding and wait for explicit user confirmation before writing code, creating issues, or changing docs beyond notes captured during the grilling session.
 
 ### Core Decision Points
 
@@ -80,6 +99,11 @@ Upon successful completion, you should have:
    - Open questions that the design phase (PRD) should address
    - Areas flagged for further investigation
    - Risks or dependencies that need mitigation
+
+6. **Facts vs. Decisions Record**
+   - Facts the agent discovered through exploration
+   - Decisions the user made explicitly
+   - Assumptions still awaiting confirmation
 
 ### Skill Verification Checklist
 
@@ -146,6 +170,9 @@ START: Vague Idea / Problem Statement
 - Acknowledge each answer and build context iteratively
 - Ask follow-up questions based on responses
 - Synthesize and feed back your understanding to verify accuracy
+- Clearly distinguish facts you discovered from decisions you need the user to make
+- Investigate facts yourself when you have access to the relevant environment or tools
+- Pause at a confirmation gate before moving from understanding into implementation
 
 **Decision Rules:**
 - If a response is vague, ask: "Can you give me a specific example?"
@@ -157,7 +184,9 @@ START: Vague Idea / Problem Statement
 - User/stakeholder confirms that clarity is sufficient
 - Checklist items are verified
 - User explicitly says "let's move to design phase"
+- Shared understanding has been summarized and confirmed
 - Agent should NOT continue adding new questions once clarity threshold is met (diminishing returns)
+- Agent should NOT implement the plan before user confirmation
 
 **Integration:**
 - Store outputs in a shareable format (document, conversation summary, or structured record)
@@ -221,6 +250,9 @@ This skill is considered mature because:
 | **Over-discovering** | Skill never ends; more questions keep emerging | Use the checklist as termination criteria. "Are we now ready to write requirements?" If yes, stop. |
 | **Insufficient context** | Design phase reveals major gaps in understanding | For work touching existing code, use Repository Exploration patterns first |
 | **Skipping grilling** | Proceeding to PRD without discovery; design goes sideways | Grill phase saves time. Incomplete discovery leads to rework later |
+| **Question batching** | Agent asks several unrelated questions at once; user answers only some of them | Ask one question at a time, then recompute the next question from the answer |
+| **Self-grilling** | Agent asks the user for facts it could discover from files, code, or tools | Separate facts from decisions. Explore facts directly; ask the user for decisions |
+| **Premature action** | Agent starts implementing immediately after a plausible plan appears | Summarize the shared understanding and wait for explicit confirmation first |
 
 ---
 
@@ -355,8 +387,18 @@ Stop when:
 This skill feeds into:
 - **[Write PRD Skill](write-prd.md):** Takes Grill Me outputs and formalizes them into detailed requirements
 - **[PRD to Issues Skill](prd-to-issues.md):** Uses formalized requirements to create implementation issues
+- **[Grill With Docs Skill](grill-with-docs.md):** Extends Grill Me for software engineering by capturing domain language and durable decisions as docs
+- **[Domain Docs](../agents/domain.md):** Provides the DDD-oriented glossary and ADR conventions used when grilling reveals domain terms or architectural decisions
 
-Together, these three skills form the **Discovery → Design → Decomposition** flow of the software development process.
+In the standard flow, Grill Me feeds **Discovery -> Design -> Decomposition** through Write PRD and PRD to Issues. For software-engineering discovery that should also preserve domain language and durable decisions, use Grill With Docs as the engineering extension.
 
 ---
+
+## Sources and Provenance
+
+| Concept/Section | Source | Type | Context | URL |
+|---|---|---|---|---|
+| Grilling design-tree technique | Matt Pocock `grilling` skill | Tool/Repository | Interview user until shared understanding; separate fact discovery from user decisions; require confirmation before acting | https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md |
+| Grill Me wrapper | Matt Pocock `grill-me` skill | Tool/Repository | Wrapper that invokes the reusable grilling technique | https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md |
+| Behavioral refinements | User-provided video summary | Video/Summary | One-question discipline, confirmation gates, facts-vs-decisions distinction, and avoiding self-grilling | N/A |
 

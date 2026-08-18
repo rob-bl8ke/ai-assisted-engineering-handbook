@@ -82,6 +82,7 @@ I have work to do
   - [Investigate a Bug](docs/playbooks/investigate-bug.md) — Finding root causes and fixing bugs
 - **[Skills](#skills)** — Executable AI capabilities and workflows
   - [Grill Me](docs/skills/grill-me.md) — Establish shared understanding through discovery
+  - [Grill With Docs](docs/skills/grill-with-docs.md) — Combine grilling with domain docs and ADRs
   - [Write PRD](docs/skills/write-prd.md) — Create formal product requirements
   - [PRD to Issues](docs/skills/prd-to-issues.md) — Decompose specifications into implementation issues
   - [Skills Overview](docs/skills/README.md) — Complete guide to all skills and maturity criteria

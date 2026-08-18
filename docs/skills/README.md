@@ -16,7 +16,7 @@ These three skills form the core workflow for AI-assisted software engineering:
    - Operationalizes: [Process Phase 1.2 - Shared Understanding](../processes/software-development.md#12-shared-understanding-grill-me)
    - Detailed guidance: [Repository Exploration Playbook](../playbooks/repository-exploration.md)
    - When to use: When you have a vague idea and need to explore it with stakeholders
-   - Canonical behavior: Ask clarifying questions, uncover constraints, identify stakeholders, document shared understanding
+   - Canonical behavior: Build a design tree, ask one question at a time, discover facts directly, ask the user for decisions, and confirm shared understanding before acting
 
 2. **[Write PRD](write-prd.md)** — Create formal specifications
    - Operationalizes: [Process Phase 2 - Design](../processes/software-development.md#phase-2-design)
@@ -29,6 +29,14 @@ These three skills form the core workflow for AI-assisted software engineering:
    - Detailed guidance: [Decompose Work Playbook](../playbooks/decompose-work.md)
    - When to use: When you have an approved PRD and need to break it into implementable issues
    - Canonical behavior: Create vertical slices, define GitHub issues, set up dependencies, document decomposition strategy
+
+### Engineering Extensions
+
+1. **[Grill With Docs](grill-with-docs.md)** — Establish shared understanding while maintaining domain docs
+   - Builds on: [Grill Me](grill-me.md)
+   - Uses: [Domain Docs](../agents/domain.md)
+   - When to use: When discovery involves domain language, bounded contexts, or durable architecture decisions
+   - Canonical behavior: Grill the plan, use DDD-style ubiquitous language, update `CONTEXT.md` when terms crystallize, and create ADRs only for durable trade-off decisions
 
 ---
 
