@@ -119,10 +119,18 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Related: Domain modeling / ubiquitous language
 │   │   └── Output: Shared understanding plus glossary and ADR updates
 │   │
+│   ├── Setup Skills / Issue Tracker
+│   │   ├── Configures: Issue tracker conventions
+│   │   ├── Configures: Triage label vocabulary
+│   │   ├── Configures: Domain docs layout
+│   │   └── Required by: To Spec, PRD to Issues, triage, Wayfinder
+│   │
 │   ├── Write PRD
 │   │   ├── Used in: Feature Development Process
 │   │   ├── Input: Shared understanding (from Grill Me)
-│   │   ├── Output: PRD document
+│   │   ├── Also known as: To Spec
+│   │   ├── Output: PRD / specification document
+│   │   ├── Publishes to: Issue tracker conventions
 │   │   └── Next step: PRD to Issues
 │   │
 │   └── PRD to Issues
@@ -308,13 +316,23 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Links to:** Matt Pocock `grill-with-docs` and `domain-modeling` source skills
 - [ ] **Status:** ⚠️ Needs verification
 
+#### Setup Skills / Issue Tracker Conventions
+- [x] **File:** `docs/agents/issue-tracker.md`
+- [x] **Provenance section** documents source
+- [x] **Links to:** Matt Pocock `setup-matt-pocock-skills` source skill
+- [x] **Links to:** Write PRD / To Spec publication behavior
+- [x] **Documents:** GitHub default plus Jira/local/other tracker adaptation point
+- [ ] **Status:** ⚠️ Needs verification
+
 #### Write PRD Skill
 - [ ] **File:** `docs/skills/write-prd.md`
-- [ ] **Provenance section** documents source
+- [x] **Provenance section** documents source
 - [ ] **Links to:** Create PRD playbook
 - [ ] **Links to:** Feature Development process
 - [ ] **Links to:** Grill Me skill (prerequisite)
 - [ ] **Links to:** PRD to Issues skill (next step)
+- [x] **Links to:** Matt Pocock `to-spec` source skill
+- [x] **Links to:** Issue Tracker conventions for publication
 - [ ] **Status:** ⚠️ Needs verification
 
 #### PRD to Issues Skill

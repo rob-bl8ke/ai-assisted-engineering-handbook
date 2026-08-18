@@ -1,14 +1,18 @@
-# Skill: Write PRD
+# Skill: Write PRD / To Spec
 
 ## Overview
 
-**Write PRD** is an automated or guided skill that transforms a clearly understood problem (output from Grill Me) into a formal Product Requirements Document (PRD). The PRD is a canonical specification that can be executed by implementation teams (human or AI).
+**Write PRD** is an automated or guided skill that transforms a clearly understood problem (output from Grill Me) into a formal specification. Historically this handbook calls that artifact a Product Requirements Document (PRD), but the broader and more accurate term is **specification**.
 
 **Canonical Purpose:** Create a clear, actionable specification that describes what should be built, why it matters, and what success looks like — without prescribing how to build it.
 
 **Related Process Phase:** [Software Development Process, Phase 2: Design](../processes/software-development.md#phase-2-design)
 
 **Detailed How-To:** [Create PRD Playbook](../playbooks/create-prd.md) (for step-by-step guidance on writing PRDs)
+
+**Reference Technique:** Matt Pocock renamed his related skill from `to-prd` to `to-spec` because the output is not necessarily a product requirements document. It is a specification: a broader artifact that can include product behavior, technical constraints, testing decisions, and implementation decisions. That naming follows the DDD habit of using the most accurate ubiquitous language for the artifact.
+
+**External Reference:** [Matt Pocock: to-spec](https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md)
 
 ---
 
@@ -110,6 +114,19 @@ Upon successful completion, you should have:
    - Technical lead review
    - (Optional) Security/compliance review if applicable
 
+### What Pocock's To Spec Does Differently
+
+Pocock's `to-spec` is narrower and more operational than a general PRD-writing skill:
+
+- **It does not interview the user.** It synthesizes from the current conversation, prior grilling output, Wayfinder research, decisions, and codebase understanding. If discovery is incomplete, run [Grill Me](grill-me.md), [Grill With Docs](grill-with-docs.md), or research first.
+- **It publishes to the issue tracker.** The spec is not just a repository document; it becomes the canonical tracker item for downstream work.
+- **It depends on setup.** The issue tracker location, triage label vocabulary, and domain-doc layout should already be configured in [Issue Tracker](../agents/issue-tracker.md) and [Domain Docs](../agents/domain.md).
+- **It uses domain language.** It reads `CONTEXT.md` and ADRs so the spec uses the repo's ubiquitous language and respects durable decisions.
+- **It asks only for testing-seam confirmation.** Rather than reopening broad discovery, it sketches the seams where the feature should be tested and checks that those seams match user expectations.
+- **It prepares the next automation step.** It labels or positions the spec so a ticket-decomposition skill can consume it directly.
+
+Use this distinction to avoid mixing phases: grilling discovers and decides; To Spec synthesizes and publishes; ticketing decomposes.
+
 ### Skill Verification Checklist
 
 - [ ] Problem statement uses user language, not solution language
@@ -189,6 +206,7 @@ START: Clear Problem Statement (from Grill Me)
 - Ask clarifying questions if requirements are vague
 - Synthesize responses into formal requirement language
 - Feed back your understanding to stakeholder for verification
+- If following Pocock's `to-spec` mode, do not interview for new requirements; synthesize known facts and decisions, then ask only for confirmation of testing seams before publishing
 
 **Decision Rules:**
 - If a requirement is vague: Ask for specific examples or measurable targets
@@ -212,6 +230,7 @@ START: Clear Problem Statement (from Grill Me)
 - Store PRD in repository (e.g., `/docs/requirements/feature-name-prd.md`)
 - Create a GitHub issue linking to the PRD
 - Transition to [PRD to Issues skill](prd-to-issues.md) or notify user that implementation planning can begin
+- If the repo uses Jira, Linear, GitLab, or a local markdown tracker, publish according to [Issue Tracker](../agents/issue-tracker.md) rather than assuming GitHub Issues
 
 ### For Humans Using This Skill
 
@@ -516,4 +535,11 @@ This skill feeds into:
 Together, these three skills form the **Discovery → Design → Decomposition** flow of the software development process.
 
 ---
+
+## Sources and Provenance
+
+| Concept/Section | Source | Type | Context | URL |
+|---|---|---|---|---|
+| To Spec naming and synthesis behavior | Matt Pocock `to-spec` skill | Tool/Repository | Renamed from To PRD; synthesizes existing discussion into a formal spec and publishes to the issue tracker | https://github.com/mattpocock/skills/blob/main/skills/engineering/to-spec/SKILL.md |
+| To Spec refinements | User-provided summary | Video/Summary | Distinguishes spec from PRD, aligns naming with ubiquitous language, and positions To Spec as input to To Tickets | N/A |
 

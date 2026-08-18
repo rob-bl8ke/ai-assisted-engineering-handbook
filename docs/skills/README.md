@@ -18,11 +18,11 @@ These three skills form the core workflow for AI-assisted software engineering:
    - When to use: When you have a vague idea and need to explore it with stakeholders
    - Canonical behavior: Build a design tree, ask one question at a time, discover facts directly, ask the user for decisions, and confirm shared understanding before acting
 
-2. **[Write PRD](write-prd.md)** — Create formal specifications
+2. **[Write PRD / To Spec](write-prd.md)** — Create formal specifications
    - Operationalizes: [Process Phase 2 - Design](../processes/software-development.md#phase-2-design)
    - Detailed guidance: [Create PRD Playbook](../playbooks/create-prd.md)
    - When to use: When you have a clear problem and need to write a formal specification
-   - Canonical behavior: Transform problem statement into formal requirements with acceptance criteria, signed off by stakeholders
+   - Canonical behavior: Transform confirmed discovery output into a formal specification with behavior, success criteria, implementation decisions, testing decisions, and tracker publication when appropriate
 
 3. **[PRD to Issues](prd-to-issues.md)** — Decompose into implementation issues
    - Operationalizes: [Process Phase 3 - Decomposition](../processes/software-development.md#phase-3-decomposition)

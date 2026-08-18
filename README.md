@@ -83,7 +83,7 @@ I have work to do
 - **[Skills](#skills)** — Executable AI capabilities and workflows
   - [Grill Me](docs/skills/grill-me.md) — Establish shared understanding through discovery
   - [Grill With Docs](docs/skills/grill-with-docs.md) — Combine grilling with domain docs and ADRs
-  - [Write PRD](docs/skills/write-prd.md) — Create formal product requirements
+  - [Write PRD / To Spec](docs/skills/write-prd.md) — Create formal specifications
   - [PRD to Issues](docs/skills/prd-to-issues.md) — Decompose specifications into implementation issues
   - [Skills Overview](docs/skills/README.md) — Complete guide to all skills and maturity criteria
 - **[Adapters](#adapters)** — Tool-specific implementations (Claude, Copilot, OpenCode)

@@ -2,7 +2,7 @@
 
 ## Overview
 
-**PRD to Issues** is an automated or guided skill that transforms a formal Product Requirements Document (output from Write PRD) into a prioritized, sequenced list of implementation issues using vertical slicing principles. Each issue is independently implementable, end-to-end testable, and sized for a single development context.
+**PRD to Issues** is an automated or guided skill that transforms a formal Product Requirements Document or specification (output from [Write PRD / To Spec](write-prd.md)) into a prioritized, sequenced list of implementation issues using vertical slicing principles. Each issue is independently implementable, end-to-end testable, and sized for a single development context.
 
 **Canonical Purpose:** Break a complex PRD into a sequence of thin, vertical slices (tracer bullets) that can be implemented independently, each moving toward complete functionality, minimizing dependencies, and enabling parallel work or AFK (away from keyboard) agent execution.
 
@@ -18,6 +18,7 @@
 
 You have:
 - Approved PRD with clear requirements and acceptance criteria
+- Or an approved specification created by [Write PRD / To Spec](write-prd.md)
 - Understanding of existing codebase and system architecture
 - Estimation capacity (understanding of team velocity or individual developer capacity)
 - Access to issue tracking system (GitHub Issues, Jira, etc.)

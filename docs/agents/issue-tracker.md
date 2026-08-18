@@ -29,6 +29,18 @@ GitHub shares one number space across issues and PRs, so a bare `#42` may be eit
 
 Create a GitHub issue.
 
+## Setup skill and tracker portability
+
+Matt Pocock's engineering skills use a setup skill, [`setup-matt-pocock-skills`](https://github.com/mattpocock/skills/blob/main/skills/engineering/setup-matt-pocock-skills/SKILL.md), before the rest of the workflow. Its job is to discover and record the repo-specific conventions that later skills assume:
+
+- Where issues live: GitHub by default, but GitLab, local markdown, Jira, Linear, or another tracker may be used.
+- Which triage labels mean `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix`.
+- Where domain docs live: `CONTEXT.md`, `CONTEXT-MAP.md`, and ADR locations.
+
+For this handbook, `docs/agents/issue-tracker.md` is the local equivalent of that setup output. If a repo uses Jira or a local issue tracker, modify this file to describe the real commands, fields, labels, and publication rules. Skills such as [Write PRD / To Spec](../skills/write-prd.md), [PRD to Issues](../skills/prd-to-issues.md), triage, and Wayfinder should read this file instead of assuming GitHub.
+
+The setup step is unique because it does not produce a feature spec or implementation ticket. It configures the operating environment that later skills depend on.
+
 ## When a skill says "fetch the relevant ticket"
 
 Run `gh issue view <number> --comments`.
@@ -43,3 +55,9 @@ Used by `/wayfinder`. The **map** is a single issue with **child** issues as tic
 - **Frontier query**: list the map's open children (`gh issue list --state open`, scoped to the map's sub-issues / task list), drop any with an open blocker (`issue_dependencies_summary.blocked_by > 0`, or an open issue in the `Blocked by` line) or an assignee; first in map order wins.
 - **Claim**: `gh issue edit <n> --add-assignee @me` -- the session's first write.
 - **Resolve**: `gh issue comment <n> --body "<answer>"`, then `gh issue close <n>`, then append a context pointer (gist + link) to the map's Decisions-so-far.
+
+## Sources and Provenance
+
+| Concept/Section | Source | Type | Context | URL |
+|---|---|---|---|---|
+| Setup skill and tracker conventions | Matt Pocock `setup-matt-pocock-skills` skill | Tool/Repository | Prompt-driven setup that records issue tracker, triage labels, and domain doc layout for later engineering skills | https://github.com/mattpocock/skills/blob/main/skills/engineering/setup-matt-pocock-skills/SKILL.md |
