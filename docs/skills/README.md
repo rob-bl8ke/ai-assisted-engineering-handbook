@@ -220,6 +220,8 @@ These will follow the same maturity criteria and harness-neutral design as the i
 
 ## Skill Maintenance
 
+Use [Sync Skills With Upstream Repositories](../playbooks/sync-skills-with-upstream.md) when a skill depends on external repository knowledge and needs a scheduled PR-based refresh process.
+
 ### When to Create a New Skill
 
 - Playbook is well-established and widely used

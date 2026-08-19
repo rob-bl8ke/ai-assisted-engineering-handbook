@@ -111,6 +111,12 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Uses: task routing, post-edit checks, session persistence, pre-commit safety
 │   │   └── Source: user-provided hook examples
 │   │
+│   ├── Sync Skills With Upstream Repositories
+│   │   ├── Supports: Skill Maintenance
+│   │   ├── Uses: scheduled tasks, local upstream clones, SHA state, scoped permissions, PR review gates
+│   │   ├── Related: Unified Agent Workspace, Configure Claude Code Hooks
+│   │   └── Source: user-provided tutorial
+│   │
 │   ├── Review Implementation
 │   │   ├── Part of: Feature Development Process
 │   │   ├── Related: Investigate Bug playbook
@@ -324,6 +330,16 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Links to:** Goal Loop pattern and Claude adapters
 - [x] **Links to:** Claude Code Hooks adapter examples
 - [x] **Documents:** pre-prompt routing, pre-tool reminders, post-edit checks, session persistence, pre-commit safety, advisory versus blocking rules
+- [x] **Status:** ✅ Verified
+
+#### Sync Skills With Upstream Repositories Playbook
+- [x] **File:** `docs/playbooks/sync-skills-with-upstream.md`
+- [x] **Provenance section** documents user-provided tutorial
+- [x] **Links to:** Skills Overview
+- [x] **Links to:** Skill Maturity Criteria
+- [x] **Links to:** Configure Claude Code Hooks playbook
+- [x] **Links to:** Unified Agent Workspace pattern
+- [x] **Documents:** upstream repo mapping, baseline SHAs, sync skill state, permissions, scheduled tasks, runtime model, manual operation, PR gate
 - [x] **Status:** ✅ Verified
 
 ### Adapters

@@ -82,6 +82,7 @@ I have work to do
   - [Review Implementation](docs/playbooks/review-implementation.md) — Systematic code review
   - [Investigate a Bug](docs/playbooks/investigate-bug.md) — Finding root causes and fixing bugs
   - [Configure Claude Code Hooks](docs/playbooks/configure-claude-code-hooks.md) — Add Claude Code guardrails, routing, and quality checks
+  - [Sync Skills With Upstream Repositories](docs/playbooks/sync-skills-with-upstream.md) — Keep skills current with upstream repos through scheduled PRs
 - **[Skills](#skills)** — Executable AI capabilities and workflows
   - [Grill Me](docs/skills/grill-me.md) — Establish shared understanding through discovery
   - [Grill With Docs](docs/skills/grill-with-docs.md) — Combine grilling with domain docs and ADRs
@@ -223,7 +224,8 @@ ai-assisted-engineering-handbook/
 │   │   ├── decompose-work.md — Convert PRDs into implementation issues
 │   │   ├── review-implementation.md — Review code systematically
 │   │   ├── investigate-bug.md — Find and fix bugs methodically
-│   │   └── configure-claude-code-hooks.md — Configure Claude Code guardrails and workflow hooks
+│   │   ├── configure-claude-code-hooks.md — Configure Claude Code guardrails and workflow hooks
+│   │   └── sync-skills-with-upstream.md — Keep skills current with upstream repository changes
 │   ├── skills/
 │   │   ├── grill-me.md — Executable discovery specification
 │   │   ├── write-prd.md — Executable PRD writing specification
