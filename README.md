@@ -81,6 +81,7 @@ I have work to do
   - [Decompose Work](docs/playbooks/decompose-work.md) — Breaking PRDs into implementation issues
   - [Review Implementation](docs/playbooks/review-implementation.md) — Systematic code review
   - [Investigate a Bug](docs/playbooks/investigate-bug.md) — Finding root causes and fixing bugs
+  - [Configure Claude Code Hooks](docs/playbooks/configure-claude-code-hooks.md) — Add Claude Code guardrails, routing, and quality checks
 - **[Skills](#skills)** — Executable AI capabilities and workflows
   - [Grill Me](docs/skills/grill-me.md) — Establish shared understanding through discovery
   - [Grill With Docs](docs/skills/grill-with-docs.md) — Combine grilling with domain docs and ADRs
@@ -88,6 +89,7 @@ I have work to do
   - [PRD to Issues](docs/skills/prd-to-issues.md) — Decompose specifications into implementation issues
   - [Skills Overview](docs/skills/README.md) — Complete guide to all skills and maturity criteria
 - **[Adapters](#adapters)** — Tool-specific implementations (Claude, Copilot, OpenCode)
+  - [Claude Code Hooks](docs/adapters/claude-code-hooks/README.md) — Hook recipes for Claude Code guardrails and workflow automation
 - **[Examples](#examples)** — Platform-specific demonstrations (Bash, PowerShell)
 - **[References & Provenance](#references--provenance)** — Source attribution and concept relationships
   - [References Overview](docs/references/README.md) — Provenance and cross-linking strategy
@@ -220,14 +222,16 @@ ai-assisted-engineering-handbook/
 │   │   ├── create-prd.md — Write clear, actionable requirements
 │   │   ├── decompose-work.md — Convert PRDs into implementation issues
 │   │   ├── review-implementation.md — Review code systematically
-│   │   └── investigate-bug.md — Find and fix bugs methodically
+│   │   ├── investigate-bug.md — Find and fix bugs methodically
+│   │   └── configure-claude-code-hooks.md — Configure Claude Code guardrails and workflow hooks
 │   ├── skills/
 │   │   ├── grill-me.md — Executable discovery specification
 │   │   ├── write-prd.md — Executable PRD writing specification
 │   │   ├── prd-to-issues.md — Executable decomposition specification
 │   │   ├── README.md — Skills overview and navigation
 │   │   └── skill-maturity-criteria.md — When playbooks become skills
-│   ├── adapters/ — (future) Harness-specific implementations
+│   ├── adapters/
+│   │   └── claude-code-hooks/ — Claude Code hook examples and lifecycle recipes
 │   └── examples/ — (future) Platform-specific demonstrations
 ├── .agents/ — AI agent customization files
 └── skills-lock.json — Installed AI skills registry

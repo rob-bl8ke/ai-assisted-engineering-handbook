@@ -65,6 +65,8 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Supports: Multi-repo agentic engineering
 │   │   ├── Related: Context Management, Repository Exploration
 │   │   ├── Supported by: Repository Mental Model Tools
+│   │   ├── Claude Code implementation: Configure Claude Code Hooks
+│   │   ├── Adapter examples: Claude Code Hooks Adapter
 │   │   └── Informed by: GitHub MultiRepoOps and CentralRepoOps
 │   │
 │   └── Context Management
@@ -101,6 +103,13 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Uses: Code search, file navigation, dependency analysis
 │   │   ├── Can be accelerated by: Repository Mental Model Tools
 │   │   └── Alternative: Asking for architecture overview
+│   │
+│   ├── Configure Claude Code Hooks
+│   │   ├── Implements: Claude Code guardrails for Unified Agent Workspace
+│   │   ├── Examples: Claude Code Hooks Adapter
+│   │   ├── Related: Goal Loop stronger control boundaries
+│   │   ├── Uses: task routing, post-edit checks, session persistence, pre-commit safety
+│   │   └── Source: user-provided hook examples
 │   │
 │   ├── Review Implementation
 │   │   ├── Part of: Feature Development Process
@@ -255,6 +264,8 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Links to:** Repository Exploration playbook
 - [x] **Links to:** Repository Mental Model Tools reference
 - [x] **Links to:** Grill With Docs skill
+- [x] **Links to:** Configure Claude Code Hooks playbook
+- [x] **Links to:** Claude Code Hooks adapter examples
 - [x] **Documents:** virtual monorepo, developer-control-plane repository, service-local vs ecosystem truth, remote automation control plane, scoped workers, downstream change propagation, three levels of truth, `system.yaml`, generated engineering indexes
 - [x] **Status:** ✅ Verified
 
@@ -305,6 +316,25 @@ SOFTWARE DEVELOPMENT PROCESS
 - [ ] **Links to:** Context Management pattern
 - [ ] **Links to:** Context Economy principle
 - [ ] **Status:** ⚠️ Needs verification
+
+#### Configure Claude Code Hooks Playbook
+- [x] **File:** `docs/playbooks/configure-claude-code-hooks.md`
+- [x] **Provenance section** documents user-provided hook examples
+- [x] **Links to:** Unified Agent Workspace pattern
+- [x] **Links to:** Goal Loop pattern and Claude adapters
+- [x] **Links to:** Claude Code Hooks adapter examples
+- [x] **Documents:** pre-prompt routing, pre-tool reminders, post-edit checks, session persistence, pre-commit safety, advisory versus blocking rules
+- [x] **Status:** ✅ Verified
+
+### Adapters
+
+#### Claude Code Hooks Adapter
+- [x] **File:** `docs/adapters/claude-code-hooks/README.md`
+- [x] **Links to:** Configure Claude Code Hooks playbook
+- [x] **Links to:** Unified Agent Workspace pattern
+- [x] **Links to:** Goal Loop Claude adapter
+- [x] **Documents:** pre-prompt routing, post-edit quality, commit safety, and optional productivity examples
+- [x] **Status:** ✅ Verified
 
 #### Review Implementation Playbook
 - [ ] **File:** `docs/playbooks/review-implementation.md`

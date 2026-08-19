@@ -302,3 +302,5 @@ Choose native `/goal` with subagents for convenience and session-native continua
 - [Goal Loop Pattern](../README.md) — Harness-agnostic core pattern.
 - [OpenCode Adapter](opencode.md) — Prompt-driven and controller-based OpenCode mappings.
 - [Ralph Loop Claude Adapter](../../ralph-loop/adapters/claude.md) — Claude guidance for Ralph Loop implementation work.
+- [Configure Claude Code Hooks](../../../playbooks/configure-claude-code-hooks.md) — Concrete Claude Code hook recipes for routing, guardrails, and quality checks.
+- [Claude Code Hooks Adapter](../../../adapters/claude-code-hooks/README.md) — Organized hook example library.

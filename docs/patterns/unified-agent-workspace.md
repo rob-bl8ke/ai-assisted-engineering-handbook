@@ -280,6 +280,12 @@ workflows/
 
 Versioning workflows is important: when generated documentation or analysis changes, you can trace whether the source changed or the procedure changed.
 
+### Claude Code Hooks
+
+When Claude Code is the active harness, shared hooks can make workspace standards visible at the moment an agent needs them. Keep hook scripts in the control plane when they express cross-repository standards such as task routing, architecture checks, API standards, secrets detection, or session persistence.
+
+Do not treat hooks as the source of truth. Mandatory rules should also exist in CI, repository policy, or pre-commit tooling so non-Claude contributors get the same enforcement. Use [Configure Claude Code Hooks](../playbooks/configure-claude-code-hooks.md) for setup guidance and the [Claude Code Hooks Adapter](../adapters/claude-code-hooks/README.md) for copied hook examples.
+
 ### Machine-Generated Knowledge
 
 Use this for indexes and reports that reduce repeated discovery:
@@ -496,6 +502,8 @@ Pilot with a small `max` fan-out and low-risk repositories before enabling organ
 - [Repository Exploration](../playbooks/repository-exploration.md)
 - [Repository Mental Model Tools](../references/repository-mental-model-tools.md)
 - [Grill With Docs](../skills/grill-with-docs.md)
+- [Configure Claude Code Hooks](../playbooks/configure-claude-code-hooks.md)
+- [Claude Code Hooks Adapter](../adapters/claude-code-hooks/README.md)
 
 ---
 
@@ -508,3 +516,4 @@ Pilot with a small `max` fan-out and low-risk repositories before enabling organ
 | CentralRepoOps | GitHub Agentic Workflows | Pattern | Documents central control repositories, central tracker repositories, orchestrator/worker split, and scoped permissions for multi-repo operations | https://github.github.com/gh-aw/patterns/central-repo-ops/ |
 | AGENTS.md as interoperable convention | Configuring Agentic AI Coding Tools paper | Research | Supports repository-level shared instructions, skills, and subagents as cross-ecosystem configuration mechanisms | https://arxiv.org/abs/2602.14690 |
 | Repository code graphs and token-efficient exploration | Codebase-Memory paper | Research | Supports persistent Tree-sitter knowledge graphs exposed through MCP for lower-token code exploration | https://arxiv.org/abs/2603.27277 |
+| Claude Code workspace hooks | User-provided hook examples | Practitioner examples | Shows how a control plane can host Claude Code prompt routing, post-edit quality checks, session persistence, and pre-commit guardrails | N/A |

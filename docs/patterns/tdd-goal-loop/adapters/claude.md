@@ -384,4 +384,6 @@ Also return:
 
 - [TDD Goal Loop Pattern](../README.md) - Harness-agnostic core pattern.
 - [Goal Loop Claude Adapter](../../goal-loop/adapters/claude.md) - Native `/goal`, subagent orchestration, and stronger control options.
+- [Configure Claude Code Hooks](../../../playbooks/configure-claude-code-hooks.md) - Claude Code hook recipes for advisory checks and stronger control boundaries.
+- [Claude Code Hooks Adapter](../../../adapters/claude-code-hooks/README.md) - Organized hook example library.
 - [Test-Driven Development](../../test-driven-development.md) - Red/green/refactor methodology.

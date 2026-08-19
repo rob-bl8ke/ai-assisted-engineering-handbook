@@ -195,6 +195,12 @@ When implementation should follow strict TDD with separate test-writing and code
 - [Claude Adapter](adapters/claude.md) — Mapping to native `/goal` behavior when available.
 - [OpenCode Adapter](adapters/opencode.md) — Markdown command plus evaluator subagent approach.
 
+**Playbooks:**
+- [Configure Claude Code Hooks](../../playbooks/configure-claude-code-hooks.md) — Claude Code hook recipes for routing, guardrails, and stronger control boundaries.
+
+**Adapters:**
+- [Claude Code Hooks Adapter](../../adapters/claude-code-hooks/README.md) — Organized hook examples including routing, quality, commit safety, and productivity hooks.
+
 **References:**
 - [Cross-Link Index](../../references/cross-links.md) — Handbook concept map.
 - [Provenance Guide](../../references/provenance.md) — Attribution format.
