@@ -581,6 +581,7 @@ This core process can be adapted for specific scenarios:
 - **Performance Optimization:** Design includes performance targets; QA emphasizes measurement
 - **Unfamiliar Codebase:** Extend Discovery with exploration; decomposition is minimal initially
 - **Maintenance Tasks:** Lightweight design; straightforward implementation; minimal validation overhead
+- **Recurring Repository Maintenance:** Use [Scheduled Agentic Work](../patterns/scheduled-agentic-work.md) when reviews, drift checks, or sync jobs should run unattended on a cadence with scoped permissions and review gates
 
 Future handbook documentation will expand these variants as separate processes.
 
@@ -616,6 +617,11 @@ This process incorporates several key patterns from the handbook. Understanding 
   - Fast feedback cycles (hours, not weeks)
   - Each slice shapes the next
   - Continuous improvement
+
+- **[Scheduled Agentic Work](../patterns/scheduled-agentic-work.md)** — Run recurring maintenance without binding the job definition to a single agent harness (maintenance variants)
+  - Separates domain knowledge, task definition, and executor
+  - Encourages incremental analysis from prior state
+  - Graduates from read-only reports to issues and PRs
 
 - **[Goal Loop](../patterns/goal-loop/README.md)** — Prove a completion condition before stopping (Phase 4)
   - Separates executor from evaluator

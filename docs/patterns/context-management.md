@@ -384,6 +384,7 @@ Context management is essential for AI agents:
 - **[Vertical Slicing](vertical-slicing.md)** — Each slice has its own focused context
 - **[Tracer Bullets](tracer-bullets.md)** — Start with minimal context; add detail as needed
 - **[Feedback Loops](feedback-loops.md)** — Use feedback to improve context for next iteration
+- **[Scheduled Agentic Work](scheduled-agentic-work.md)** — Apply focused incremental context to recurring unattended repository reviews
 
 ---
 

@@ -69,6 +69,13 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Adapter examples: Claude Code Hooks Adapter
 │   │   └── Informed by: GitHub MultiRepoOps and CentralRepoOps
 │   │
+│   ├── Scheduled Agentic Work
+│   │   ├── Supports: recurring repository maintenance
+│   │   ├── Separates: domain knowledge, task definition, executor
+│   │   ├── Executors: Claude Routines, Copilot Automations, OpenCode GitHub Actions, GitHub Agentic Workflows
+│   │   ├── Used by: Sync Skills With Upstream Repositories
+│   │   └── Related: Unified Agent Workspace, Context Management, Repository Mental Model Tools
+│   │
 │   └── Context Management
 │       ├── Related: Context Economy principle
 │       ├── Used in: Repository Exploration, Ralph Loop
@@ -113,6 +120,7 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │
 │   ├── Sync Skills With Upstream Repositories
 │   │   ├── Supports: Skill Maintenance
+│   │   ├── Applies: Scheduled Agentic Work
 │   │   ├── Uses: scheduled tasks, local upstream clones, SHA state, scoped permissions, PR review gates
 │   │   ├── Related: Unified Agent Workspace, Configure Claude Code Hooks
 │   │   └── Source: user-provided tutorial
@@ -173,6 +181,7 @@ SOFTWARE DEVELOPMENT PROCESS
     ├── Repository Mental Model Tools
     │   ├── Supports: Repository Exploration
     │   ├── Supports: Context Management
+    │   ├── Supports: Scheduled Agentic Work
     │   ├── Prioritizes: MCP, AGENTS.md, skills, token efficiency, multi-agent portability
     │   ├── Categories: Human learning, Agent context, Code intelligence
     │   └── Examples: Serena, code-review-graph, Graphify, Sense, Understand Anything, Understand Everything, Codebase-Memory, CodeGraph
@@ -275,6 +284,16 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Documents:** virtual monorepo, developer-control-plane repository, service-local vs ecosystem truth, remote automation control plane, scoped workers, downstream change propagation, three levels of truth, `system.yaml`, generated engineering indexes
 - [x] **Status:** ✅ Verified
 
+#### Scheduled Agentic Work Pattern
+- [x] **File:** `docs/patterns/scheduled-agentic-work.md`
+- [x] **Provenance section** documents user-provided synthesis and linked vendor documentation
+- [x] **Links to:** Sync Skills With Upstream Repositories playbook
+- [x] **Links to:** Unified Agent Workspace pattern
+- [x] **Links to:** Context Management pattern
+- [x] **Links to:** Repository Mental Model Tools reference
+- [x] **Documents:** domain knowledge/task definition/executor separation, incremental review, permission graduation, executor options, maintenance cadence
+- [x] **Status:** ✅ Verified
+
 ### Processes
 
 #### Feature Development Process
@@ -337,9 +356,10 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Provenance section** documents user-provided tutorial
 - [x] **Links to:** Skills Overview
 - [x] **Links to:** Skill Maturity Criteria
+- [x] **Links to:** Scheduled Agentic Work pattern
 - [x] **Links to:** Configure Claude Code Hooks playbook
 - [x] **Links to:** Unified Agent Workspace pattern
-- [x] **Documents:** upstream repo mapping, baseline SHAs, sync skill state, permissions, scheduled tasks, runtime model, manual operation, PR gate
+- [x] **Documents:** upstream repo mapping, baseline SHAs, sync skill state, PR gate, plus Claude-specific scoped permissions, daily fire-and-gate scheduling, desktop scheduled-task runtime model, and manual operation
 - [x] **Status:** ✅ Verified
 
 ### Adapters
@@ -455,6 +475,7 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Provenance section** documents source
 - [x] **Links to:** Repository Exploration playbook
 - [x] **Links to:** Context Management pattern
+- [x] **Links to:** Scheduled Agentic Work pattern
 - [x] **Links to:** Grill With Docs and Ralph Loop as related practices
 - [x] **Documents:** MCP, AGENTS.md, skills, Serena, code-review-graph, Graphify, Sense, Understand Anything, Understand Everything, Codebase-Memory, CodeGraph, DeepWiki-style tools
 - [x] **Status:** ✅ Verified
@@ -463,7 +484,7 @@ SOFTWARE DEVELOPMENT PROCESS
 
 | Category | Total | Complete | Needs Update | Status |
 |----------|-------|----------|--------------|--------|
-| Patterns | 8 | 3 | 5 | ⚠️ In Progress |
+| Patterns | 9 | 4 | 5 | ⚠️ In Progress |
 | Processes | 1 | 0 | 1 | ⚠️ Needs Update |
 | Playbooks | 5 | 0 | 5 | ⚠️ Needs Update |
 | Skills | 3 | 0 | 3 | ⚠️ Needs Update |

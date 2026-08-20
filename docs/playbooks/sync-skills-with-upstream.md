@@ -6,6 +6,10 @@ Use this playbook to keep a skill current with one or more upstream source repos
 
 This is useful when a skill encodes knowledge that actually lives in another repository, such as configuration keys, annotations, version numbers, setup steps, API behavior, or package conventions.
 
+This is a concrete application of the [Scheduled Agentic Work](../patterns/scheduled-agentic-work.md) pattern: the sync skill carries the domain-specific update procedure, the scheduled task defines cadence and invocation, and the executor can be swapped when the permission model changes.
+
+The repository-to-skill mapping, baseline SHA tracking, state file, time gate, and PR gate are harness-neutral. The `.claude/settings.local.json`, `scheduled-tasks` MCP, `/schedule`, and Claude Desktop runtime details below are Claude-specific adapter guidance.
+
 ## Problem
 
 A skill can drift out of date after the upstream repository changes. The fix is a small recurring job that:
@@ -150,11 +154,11 @@ Required boundaries:
 
 - Repo allowlist: read only the exact `local_clone` paths in the state file.
 - Write allowlist: edit only the mapped dependent skill paths and the sync skill's own state.
-- PR-only workflow: every write goes through branch, commit, push, and PR creation.
+- PR-only workflow: every write goes through branch, commit, push, and PR creation, including timestamp-only state updates.
 - No direct `main` writes: never commit or push to `main` directly.
 - No privileged Git operations: never merge, force-push, reset hard, or delete branches the skill did not create.
 
-Example `.claude/settings.local.json` permission allowlist:
+Claude-specific example `.claude/settings.local.json` permission allowlist:
 
 ```json
 {
@@ -181,26 +185,28 @@ Example `.claude/settings.local.json` permission allowlist:
 }
 ```
 
-This file is usually local and gitignored. Verify with:
+This Claude settings file is usually local, machine-specific, and gitignored. Verify with:
 
 ```bash
 git check-ignore -v .claude/settings.local.json
 ```
 
-The allowlist is the security boundary. If the skill tries something outside this list, it should hit a permission wall.
+The allowlist is the security boundary, not the wording of the skill prompt. If the skill tries something outside this list, it should hit a permission wall.
 
 ## Step 5: Configure the Schedule
 
-Use a scheduled-task mechanism to call the sync skill. In Claude Desktop environments, this can be done through the `scheduled-tasks` MCP server or a `/schedule` command backed by that server.
+This section is Claude-specific. For other executors, use the same sync skill, state file, time gate, and PR policy, but replace the `scheduled-tasks` MCP invocation with that executor's scheduling mechanism.
+
+Use a scheduled-task mechanism to call the sync skill. In Claude Desktop environments, this can be done through the `scheduled-tasks` MCP server, with tools such as `mcp__scheduled-tasks__create_scheduled_task`, or a `/schedule` command backed by that server.
 
 Create a task with:
 
 - `taskId`: a short kebab-case id, such as `sync-widget-skills`.
-- `cronExpression`: a daily cron string, such as `35 11 * * *`.
+- `cronExpression`: a daily cron string, such as `35 11 * * *`, rather than a literal weekly cron.
 - `notifyOnCompletion`: `false`, so no-op days do not create notification noise.
 - `prompt`: a fully self-contained instruction because the task has no memory of the setup conversation.
 
-Use a daily cron plus a skill-level time gate rather than a literal weekly cron. If the app or machine is not running at one weekly firing, the check can be missed for a full week. A daily fire-and-gate setup catches up the next time the app is open during the window.
+Use a daily cron plus a skill-level time gate rather than a literal weekly cron. If the app or machine is not running at one weekly firing, the check can be missed for a full week. A daily fire-and-gate setup catches up the next day the app is open, while the skill's `last_full_check_at` gate prevents daily real work.
 
 Example scheduled task shape:
 
@@ -215,7 +221,9 @@ Example scheduled task shape:
 }
 ```
 
-## Step 6: Understand the Runtime Model
+## Step 6: Understand the Claude Desktop Runtime Model
+
+This section applies to Claude Desktop scheduled tasks. Do not generalize it to OS cron, GitHub Actions, Copilot Automations, OpenCode, or Claude cloud Routines without checking that executor's runtime model.
 
 Do not assume this is an OS-level cron job unless you configured OS cron or launchd yourself.
 
@@ -231,16 +239,18 @@ This is why the daily cron plus skill-level gate matters. The goal is not exact-
 
 If you need guaranteed execution independent of the desktop app, use a real OS-level `cron` or `launchd` job that invokes the CLI headlessly.
 
-## Step 7: Operate the Schedule
+## Step 7: Operate the Claude Scheduled Task
+
+This section is Claude-specific. Other executors should provide equivalent operations for listing, manually running, pausing, resuming, and deleting the scheduled invocation.
 
 Common operations:
 
-- List tasks with `mcp__scheduled-tasks__list_scheduled_tasks`.
-- Read the task prompt from the on-disk `path` returned by the listing.
+- List tasks with `mcp__scheduled-tasks__list_scheduled_tasks`; the listing should show each task's cron expression, enabled state, `nextRunAt`, `lastRunAt`, and prompt `path`.
+- Read the task prompt from the on-disk `path` returned by the listing. Claude scheduled-task prompts are stored outside the repository, commonly as `{taskId}/SKILL.md` under `~/.claude/scheduled-tasks/`.
 - Run the skill manually with a force argument, such as `/sync-widget-skills force`.
 - Pause the task with `mcp__scheduled-tasks__update_scheduled_task` and `enabled: false`.
 - Resume by setting `enabled: true`.
-- Delete with `mcp__scheduled-tasks__delete_scheduled_task`.
+- Delete with `mcp__scheduled-tasks__delete_scheduled_task`. Deletion stops the task; keep or inspect any remaining prompt file as local reference rather than treating it as handbook source of truth.
 
 Scheduled tasks are callers. The sync skill remains the primary entry point and should be runnable manually for testing.
 
@@ -252,15 +262,17 @@ Scheduled tasks are callers. The sync skill remains the primary entry point and 
 4. Record baseline SHAs.
 5. Create the sync skill and seed `state/sync-state.json`.
 6. Add a skill-level time gate.
-7. Add narrowly scoped local permissions for fetch, diff, branch, push, PR creation, and affected skill edits.
-8. Create a daily scheduled task that invokes the skill.
-9. Test manually with `force` before waiting for the schedule.
-10. Verify the result opens a PR and never lands changes directly.
+7. If using Claude locally, add narrowly scoped `.claude/settings.local.json` permissions for fetch, diff, branch, push, PR creation, and affected skill edits.
+8. Create a daily scheduled task that invokes the skill; let the skill's gate decide whether a given day is a real check.
+9. If using Claude Desktop scheduled tasks, remember they only fire while the desktop app is running, or on next launch if supported.
+10. Test manually with `force` before waiting for the schedule.
+11. Verify the result opens a PR and never lands changes directly.
 
 ## Related
 
 - [Skills Overview](../skills/README.md) - Skill lifecycle and maintenance guidance.
 - [Skill Maturity Criteria](../skills/skill-maturity-criteria.md) - When a playbook should become an executable skill.
+- [Scheduled Agentic Work](../patterns/scheduled-agentic-work.md) - Harness-neutral pattern for recurring repository maintenance.
 - [Configure Claude Code Hooks](configure-claude-code-hooks.md) - Related Claude Code guardrail configuration.
 - [Unified Agent Workspace](../patterns/unified-agent-workspace.md) - Control-plane placement for shared skills, scripts, and standards.
 

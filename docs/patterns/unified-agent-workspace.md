@@ -499,6 +499,7 @@ Pilot with a small `max` fan-out and low-risk repositories before enabling organ
 ## Related
 
 - [Context Management](context-management.md)
+- [Scheduled Agentic Work](scheduled-agentic-work.md)
 - [Repository Exploration](../playbooks/repository-exploration.md)
 - [Repository Mental Model Tools](../references/repository-mental-model-tools.md)
 - [Grill With Docs](../skills/grill-with-docs.md)

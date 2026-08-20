@@ -121,6 +121,9 @@ The following table shows major concept relationships to ensure comprehensive cr
 | Ralph Loop | Pattern | Bash Example | Platform |
 | Ralph Loop | Pattern | PowerShell Example | Platform |
 | Ralph Loop | Pattern | Claude Adapter | Harness |
+| Scheduled Agentic Work | Pattern | Sync Skills With Upstream Repositories Playbook | Application |
+| Scheduled Agentic Work | Pattern | Unified Agent Workspace Pattern | Composition |
+| Scheduled Agentic Work | Pattern | Context Management Pattern | Prerequisite |
 | Vertical Slicing | Pattern | Feature Development Process | Composition |
 | Vertical Slicing | Pattern | Decompose Work Playbook | Composition |
 | Feature Development | Process | Create PRD Playbook | Composition |

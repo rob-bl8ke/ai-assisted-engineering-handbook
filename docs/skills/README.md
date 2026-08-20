@@ -220,6 +220,8 @@ These will follow the same maturity criteria and harness-neutral design as the i
 
 ## Skill Maintenance
 
+Use [Scheduled Agentic Work](../patterns/scheduled-agentic-work.md) when a skill should run as recurring repository maintenance without binding the job definition to one agent harness.
+
 Use [Sync Skills With Upstream Repositories](../playbooks/sync-skills-with-upstream.md) when a skill depends on external repository knowledge and needs a scheduled PR-based refresh process.
 
 ### When to Create a New Skill
