@@ -461,6 +461,8 @@ engineering/
 
 Then add graph tooling or MCP servers only when repeated discovery becomes a measured bottleneck.
 
+Use the [Agent Workspace Lab](../playbooks/agent-workspace-lab.md) when you need to prove that committed skills, custom agents, external dependencies, bootstrap, CI, and scheduled execution are portable before scaling the workspace pattern.
+
 After validating the local workspace, add remote automation gradually:
 
 ```text
@@ -501,6 +503,7 @@ Pilot with a small `max` fan-out and low-risk repositories before enabling organ
 - [Context Management](context-management.md)
 - [Scheduled Agentic Work](scheduled-agentic-work.md)
 - [Repository Exploration](../playbooks/repository-exploration.md)
+- [Agent Workspace Lab](../playbooks/agent-workspace-lab.md)
 - [Repository Mental Model Tools](../references/repository-mental-model-tools.md)
 - [Grill With Docs](../skills/grill-with-docs.md)
 - [Configure Claude Code Hooks](../playbooks/configure-claude-code-hooks.md)

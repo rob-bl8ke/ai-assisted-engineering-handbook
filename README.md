@@ -84,6 +84,7 @@ I have work to do
   - [Investigate a Bug](docs/playbooks/investigate-bug.md) — Finding root causes and fixing bugs
   - [Configure Claude Code Hooks](docs/playbooks/configure-claude-code-hooks.md) — Add Claude Code guardrails, routing, and quality checks
   - [Sync Skills With Upstream Repositories](docs/playbooks/sync-skills-with-upstream.md) — Keep skills current with upstream repos through scheduled PRs
+  - [Agent Workspace Lab](docs/playbooks/agent-workspace-lab.md) — Prove portable skills, agents, bootstrap, CI, and scheduled custodians
 - **[Skills](#skills)** — Executable AI capabilities and workflows
   - [Grill Me](docs/skills/grill-me.md) — Establish shared understanding through discovery
   - [Grill With Docs](docs/skills/grill-with-docs.md) — Combine grilling with domain docs and ADRs
@@ -227,7 +228,8 @@ ai-assisted-engineering-handbook/
 │   │   ├── review-implementation.md — Review code systematically
 │   │   ├── investigate-bug.md — Find and fix bugs methodically
 │   │   ├── configure-claude-code-hooks.md — Configure Claude Code guardrails and workflow hooks
-│   │   └── sync-skills-with-upstream.md — Keep skills current with upstream repository changes
+│   │   ├── sync-skills-with-upstream.md — Keep skills current with upstream repository changes
+│   │   └── agent-workspace-lab.md — Prove portable skills, agents, bootstrap, CI, and scheduled custodians
 │   ├── skills/
 │   │   ├── grill-me.md — Executable discovery specification
 │   │   ├── write-prd.md — Executable PRD writing specification
@@ -237,8 +239,8 @@ ai-assisted-engineering-handbook/
 │   ├── adapters/
 │   │   └── claude-code-hooks/ — Claude Code hook examples and lifecycle recipes
 │   └── examples/ — (future) Platform-specific demonstrations
-├── .agents/ — AI agent customization files
-└── skills-lock.json — Installed AI skills registry
+├── .agents/ — Repository-owned AI skills and optional ignored external runtime material
+└── skills-lock.json — Committed registry for reproducible external skill installs
 ```
 
 ---

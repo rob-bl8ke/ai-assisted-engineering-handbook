@@ -224,6 +224,15 @@ Use [Scheduled Agentic Work](../patterns/scheduled-agentic-work.md) when a skill
 
 Use [Sync Skills With Upstream Repositories](../playbooks/sync-skills-with-upstream.md) when a skill depends on external repository knowledge and needs a scheduled PR-based refresh process.
 
+For CI and cloud agents, apply the rule from [Scheduled Agentic Work](../patterns/scheduled-agentic-work.md#runtime-portability): commit repository-owned skill intent, lock external skill dependencies, bootstrap ignored runtime material, and fail the job if required skills or agents are unavailable.
+
+```text
+repository-owned review or operating policy -> commit under .agents/skills/
+external reusable skill dependency          -> lock, bootstrap, validate
+```
+
+Use the [Agent Workspace Lab](../playbooks/agent-workspace-lab.md) to test these rules across Claude, Copilot, OpenCode, `npx skills`, `skul`, `dotagents`, CI, and scheduled execution.
+
 ### When to Create a New Skill
 
 - Playbook is well-established and widely used

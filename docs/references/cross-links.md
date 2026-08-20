@@ -65,6 +65,7 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Supports: Multi-repo agentic engineering
 │   │   ├── Related: Context Management, Repository Exploration
 │   │   ├── Supported by: Repository Mental Model Tools
+│   │   ├── Validated by: Agent Workspace Lab
 │   │   ├── Claude Code implementation: Configure Claude Code Hooks
 │   │   ├── Adapter examples: Claude Code Hooks Adapter
 │   │   └── Informed by: GitHub MultiRepoOps and CentralRepoOps
@@ -72,8 +73,10 @@ SOFTWARE DEVELOPMENT PROCESS
 │   ├── Scheduled Agentic Work
 │   │   ├── Supports: recurring repository maintenance
 │   │   ├── Separates: domain knowledge, task definition, executor
-│   │   ├── Executors: Claude Routines, Copilot Automations, OpenCode GitHub Actions, GitHub Agentic Workflows
-│   │   ├── Used by: Sync Skills With Upstream Repositories
+│   │   ├── Requires for CI/cloud: committed repository intent, locked external dependencies, bootstrap, preflight validation
+│   │   ├── Executors: Claude `/loop`, Claude Desktop scheduled tasks, Claude Routines, Claude Code in CI, Copilot Automations, OpenCode GitHub Actions, GitHub Agentic Workflows
+│   │   ├── Recommends: incremental review from previous audit state and permission graduation
+│   │   ├── Used by: Sync Skills With Upstream Repositories, Agent Workspace Lab, Skills maintenance
 │   │   └── Related: Unified Agent Workspace, Context Management, Repository Mental Model Tools
 │   │
 │   └── Context Management
@@ -124,6 +127,13 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Uses: scheduled tasks, local upstream clones, SHA state, scoped permissions, PR review gates
 │   │   ├── Related: Unified Agent Workspace, Configure Claude Code Hooks
 │   │   └── Source: user-provided tutorial
+│   │
+│   ├── Agent Workspace Lab
+│   │   ├── Applies: Scheduled Agentic Work runtime portability
+│   │   ├── Validates: Unified Agent Workspace portability
+│   │   ├── Tests: npx skills, skul, dotagents, GitHub Agentic Workflows, CI, scheduled custodians
+│   │   ├── Produces: deterministic sample service, expected findings, harness comparison, fresh-clone proof
+│   │   └── Source: user-provided lab design
 │   │
 │   ├── Review Implementation
 │   │   ├── Part of: Feature Development Process
@@ -291,7 +301,9 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Links to:** Unified Agent Workspace pattern
 - [x] **Links to:** Context Management pattern
 - [x] **Links to:** Repository Mental Model Tools reference
-- [x] **Documents:** domain knowledge/task definition/executor separation, incremental review, permission graduation, executor options, maintenance cadence
+- [x] **Links to:** Agent Workspace Lab playbook
+- [x] **Links from:** Skills README
+- [x] **Documents:** domain knowledge/task definition/executor separation, runtime portability, commit intent / lock dependencies, bootstrap and preflight validation, incremental review, permission graduation, executor options, Claude scheduling levels, Copilot Automations, OpenCode GitHub Actions, GitHub Agentic Workflows, maintenance cadence
 - [x] **Status:** ✅ Verified
 
 ### Processes
@@ -360,6 +372,15 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Links to:** Configure Claude Code Hooks playbook
 - [x] **Links to:** Unified Agent Workspace pattern
 - [x] **Documents:** upstream repo mapping, baseline SHAs, sync skill state, PR gate, plus Claude-specific scoped permissions, daily fire-and-gate scheduling, desktop scheduled-task runtime model, and manual operation
+- [x] **Status:** ✅ Verified
+
+#### Agent Workspace Lab Playbook
+- [x] **File:** `docs/playbooks/agent-workspace-lab.md`
+- [x] **Provenance section** documents user-provided lab design and linked tool documentation
+- [x] **Links to:** Scheduled Agentic Work pattern
+- [x] **Links to:** Unified Agent Workspace pattern
+- [x] **Links to:** Skills README
+- [x] **Documents:** Labs 0-15, deterministic sample target, `npx skills`, repository-owned skills, thin native agent wrappers, behavioural harness comparison, `skul`, `dotagents`, fresh-clone proof, clean-machine test, CI, `gh aw`, scheduled custodian graduation
 - [x] **Status:** ✅ Verified
 
 ### Adapters

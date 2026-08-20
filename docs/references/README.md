@@ -124,6 +124,12 @@ The following table shows major concept relationships to ensure comprehensive cr
 | Scheduled Agentic Work | Pattern | Sync Skills With Upstream Repositories Playbook | Application |
 | Scheduled Agentic Work | Pattern | Unified Agent Workspace Pattern | Composition |
 | Scheduled Agentic Work | Pattern | Context Management Pattern | Prerequisite |
+| Scheduled Agentic Work | Pattern | Repository Mental Model Tools Reference | Support |
+| Scheduled Agentic Work | Pattern | Claude, Copilot, OpenCode, and GitHub Agentic Workflows | Harness variants |
+| Scheduled Agentic Work | Pattern | Skills README | Runtime portability |
+| Agent Workspace Lab | Playbook | Scheduled Agentic Work Pattern | Application |
+| Agent Workspace Lab | Playbook | Unified Agent Workspace Pattern | Validation |
+| Agent Workspace Lab | Playbook | Skills README | Portability test |
 | Vertical Slicing | Pattern | Feature Development Process | Composition |
 | Vertical Slicing | Pattern | Decompose Work Playbook | Composition |
 | Feature Development | Process | Create PRD Playbook | Composition |
