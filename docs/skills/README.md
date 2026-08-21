@@ -121,6 +121,8 @@ Skills enable human and AI collaboration:
 - Humans review AI outputs; AI implements human decisions
 - Skills define clear handoff points between human and AI
 
+Use [Agent Context Artifacts](../references/agent-context-artifacts.md) when deciding whether guidance belongs in a reusable skill, local `AGENTS.md` instructions, durable `CONTEXT.md` understanding, or task-specific plans and issues.
+
 Example: Grill Me Skill
 - AI: Ask clarifying questions, synthesize answers
 - Human: Verify understanding, make judgment calls, resolve conflicts
@@ -310,6 +312,7 @@ To add or update skills:
 - [Playbooks](../playbooks/) — Detailed procedural guidance for each skill
 - [Patterns](../patterns/) — Reusable techniques these skills apply
 - [Skill Maturity Criteria](skill-maturity-criteria.md) — When to create a skill from a playbook
+- [Agent Context Artifacts](../references/agent-context-artifacts.md) — Boundary between skills, `AGENTS.md`, `CONTEXT.md`, and task state
 
 ---
 

@@ -96,6 +96,7 @@ I have work to do
 - **[Examples](#examples)** — Platform-specific demonstrations (Bash, PowerShell)
 - **[References & Provenance](#references--provenance)** — Source attribution and concept relationships
   - [References Overview](docs/references/README.md) — Provenance and cross-linking strategy
+  - [Agent Context Artifacts](docs/references/agent-context-artifacts.md) — When to use AGENTS.md, CONTEXT.md, skills, and task state
   - [Repository Mental Model Tools](docs/references/repository-mental-model-tools.md) — Codebase graph, documentation, and code-intelligence tool ecosystem
   - [Provenance Guide](docs/references/provenance.md) — How to record sources and attribution
   - [Cross-Link Index](docs/references/cross-links.md) — Concept relationships and navigation
@@ -238,6 +239,11 @@ ai-assisted-engineering-handbook/
 │   │   └── skill-maturity-criteria.md — When playbooks become skills
 │   ├── adapters/
 │   │   └── claude-code-hooks/ — Claude Code hook examples and lifecycle recipes
+│   ├── references/
+│   │   ├── agent-context-artifacts.md — When to use AGENTS.md, CONTEXT.md, skills, and task state
+│   │   ├── repository-mental-model-tools.md — Repository context and code-intelligence tools
+│   │   ├── provenance.md — Source and attribution conventions
+│   │   └── cross-links.md — Concept relationship index
 │   └── examples/ — (future) Platform-specific demonstrations
 ├── .agents/ — Repository-owned AI skills and optional ignored external runtime material
 └── skills-lock.json — Committed registry for reproducible external skill installs

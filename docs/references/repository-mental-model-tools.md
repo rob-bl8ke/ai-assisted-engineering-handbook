@@ -4,7 +4,7 @@
 
 Repository mental model tools help humans and AI agents understand a codebase at repository scope. They reduce repeated rediscovery of architecture, dependencies, symbol relationships, and documentation by precomputing or presenting a map of the system.
 
-They are adjacent to [Repository Exploration](../playbooks/repository-exploration.md) and [Context Management](../patterns/context-management.md): instead of repeatedly grepping, reading files, and reconstructing architecture from scratch, these tools provide a persistent or queryable model that can guide exploration.
+They are adjacent to [Repository Exploration](../playbooks/repository-exploration.md), [Context Management](../patterns/context-management.md), and [Agent Context Artifacts](agent-context-artifacts.md): instead of repeatedly grepping, reading files, and reconstructing architecture from scratch, these tools provide a persistent or queryable model that can guide exploration.
 
 For multi-agent development, evaluate these tools by portability and token efficiency before visualization. The strongest setup is not a vendor-specific dashboard; it is a portable repository substrate that lets Copilot, Claude Code, OpenCode, and other agents share the same instructions and code intelligence.
 
@@ -63,6 +63,7 @@ The goal is not to make every agent ingest the whole repository. The goal is to 
 The first layer is not a graph product. It is the repository-level contract that every agent can consume:
 
 - **AGENTS.md** for repository instructions, vocabulary, constraints, and maintenance rules.
+- **CONTEXT.md** for durable system, domain, architecture, or feature understanding.
 - **Skills** for executable or repeatable agent capabilities that should survive across harnesses.
 - **MCP** for exposing local tools and code intelligence through a common protocol.
 
@@ -267,6 +268,7 @@ The optimization target is not maximum standalone model intelligence. It is usef
 ## Relationship to Handbook Practices
 
 - [Repository Exploration](../playbooks/repository-exploration.md): these tools can accelerate module mapping, dependency discovery, and architecture exploration.
+- [Agent Context Artifacts](agent-context-artifacts.md): `AGENTS.md`, `CONTEXT.md`, skills, and task state define what durable knowledge should exist before graph or code-intelligence tools are added.
 - [Context Management](../patterns/context-management.md): these tools help select the small subset of repository context relevant to the task.
 - [Unified Agent Workspace](../patterns/unified-agent-workspace.md): these tools can provide the shared code intelligence layer for a virtual monorepo or developer-control-plane repository.
 - [Scheduled Agentic Work](../patterns/scheduled-agentic-work.md): recurring maintenance jobs can use graphs and code intelligence to expand from changed files to affected components without scanning the whole repository every run.

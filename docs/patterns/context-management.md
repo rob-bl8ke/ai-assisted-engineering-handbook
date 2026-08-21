@@ -17,6 +17,8 @@ Good context management means the AI can work effectively without wasting LLM to
 
 For large repositories, [Repository Mental Model Tools](../references/repository-mental-model-tools.md) can support this pattern by selecting relevant structural context: callers, dependencies, affected symbols, architecture relationships, and cross-artifact links.
 
+Use [Agent Context Artifacts](../references/agent-context-artifacts.md) to decide whether new agent-facing information belongs in `AGENTS.md`, `CONTEXT.md`, a skill, or task state.
+
 For multi-repository systems, the [Unified Agent Workspace](unified-agent-workspace.md) pattern creates a shared filesystem boundary, instructions layer, and engineering index so agents can manage context across independently versioned repositories.
 
 ---
@@ -385,6 +387,7 @@ Context management is essential for AI agents:
 - **[Tracer Bullets](tracer-bullets.md)** — Start with minimal context; add detail as needed
 - **[Feedback Loops](feedback-loops.md)** — Use feedback to improve context for next iteration
 - **[Scheduled Agentic Work](scheduled-agentic-work.md)** — Apply focused incremental context to recurring unattended repository reviews
+- **[Agent Context Artifacts](../references/agent-context-artifacts.md)** — Choose between `AGENTS.md`, `CONTEXT.md`, skills, and task state
 
 ---
 

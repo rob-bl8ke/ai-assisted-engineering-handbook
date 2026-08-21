@@ -60,6 +60,7 @@ See [provenance.md](provenance.md) for detailed guidance.
 
 ## Tool Ecosystem References
 
+- [Agent Context Artifacts](agent-context-artifacts.md) - Decision model for when to use `AGENTS.md`, `CONTEXT.md`, skills, and task state
 - [Repository Mental Model Tools](repository-mental-model-tools.md) - MCP, AGENTS.md, Serena, code-review-graph, Graphify, Sense, Codebase-Memory, and related tools for portable repository context and code intelligence
 
 ## Cross-Linking Strategy
@@ -127,6 +128,10 @@ The following table shows major concept relationships to ensure comprehensive cr
 | Scheduled Agentic Work | Pattern | Repository Mental Model Tools Reference | Support |
 | Scheduled Agentic Work | Pattern | Claude, Copilot, OpenCode, and GitHub Agentic Workflows | Harness variants |
 | Scheduled Agentic Work | Pattern | Skills README | Runtime portability |
+| Agent Context Artifacts | Reference | Context Management Pattern | Prerequisite |
+| Agent Context Artifacts | Reference | Skills README | Boundary definition |
+| Agent Context Artifacts | Reference | Repository Mental Model Tools Reference | Support |
+| Agent Context Artifacts | Reference | Unified Agent Workspace Pattern | Composition |
 | Agent Workspace Lab | Playbook | Scheduled Agentic Work Pattern | Application |
 | Agent Workspace Lab | Playbook | Unified Agent Workspace Pattern | Validation |
 | Agent Workspace Lab | Playbook | Skills README | Portability test |

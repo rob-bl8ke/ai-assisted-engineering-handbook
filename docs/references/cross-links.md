@@ -192,9 +192,17 @@ SOFTWARE DEVELOPMENT PROCESS
     │   ├── Supports: Repository Exploration
     │   ├── Supports: Context Management
     │   ├── Supports: Scheduled Agentic Work
+    │   ├── Related: Agent Context Artifacts
     │   ├── Prioritizes: MCP, AGENTS.md, skills, token efficiency, multi-agent portability
     │   ├── Categories: Human learning, Agent context, Code intelligence
     │   └── Examples: Serena, code-review-graph, Graphify, Sense, Understand Anything, Understand Everything, Codebase-Memory, CodeGraph
+    │
+    ├── Agent Context Artifacts
+    │   ├── Supports: Context Management
+    │   ├── Supports: Skills maintenance
+    │   ├── Supports: Unified Agent Workspace navigation
+    │   ├── Defines: AGENTS routes, Context explains, Skills teach, Plans track
+    │   └── Links to: Repository Mental Model Tools, Skills README, Grill With Docs
     │
     └── [Additional sources documented in each concept's Provenance section]
 ```
@@ -495,10 +503,22 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **File:** `docs/references/repository-mental-model-tools.md`
 - [x] **Provenance section** documents source
 - [x] **Links to:** Repository Exploration playbook
+- [x] **Links to:** Agent Context Artifacts reference
 - [x] **Links to:** Context Management pattern
 - [x] **Links to:** Scheduled Agentic Work pattern
 - [x] **Links to:** Grill With Docs and Ralph Loop as related practices
 - [x] **Documents:** MCP, AGENTS.md, skills, Serena, code-review-graph, Graphify, Sense, Understand Anything, Understand Everything, Codebase-Memory, CodeGraph, DeepWiki-style tools
+- [x] **Status:** ✅ Verified
+
+#### Agent Context Artifacts
+- [x] **File:** `docs/references/agent-context-artifacts.md`
+- [x] **Provenance section** documents user-provided practitioner synthesis
+- [x] **Links to:** Context Management pattern
+- [x] **Links to:** Repository Mental Model Tools reference
+- [x] **Links to:** Unified Agent Workspace pattern
+- [x] **Links to:** Skills README
+- [x] **Links from:** References README, Skills README, Context Management pattern, Repository Mental Model Tools reference, Unified Agent Workspace pattern
+- [x] **Documents:** `AGENTS.md` routes and constrains, `CONTEXT.md` explains durable understanding, skills teach reusable methods, plans/issues track current work state
 - [x] **Status:** ✅ Verified
 
 ## Cross-Link Status Summary
@@ -510,7 +530,7 @@ SOFTWARE DEVELOPMENT PROCESS
 | Playbooks | 5 | 0 | 5 | ⚠️ Needs Update |
 | Skills | 3 | 0 | 3 | ⚠️ Needs Update |
 | Principles | 2+ | 0 | 2+ | ⚠️ Needs Update |
-| References | 4 | 4 | 0 | ✅ Complete |
+| References | 5 | 5 | 0 | ✅ Complete |
 
 **Overall MVP Status:** ~70% complete (Reference system created, existing concepts need cross-links and provenance)
 

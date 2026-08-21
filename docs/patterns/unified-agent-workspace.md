@@ -504,6 +504,7 @@ Pilot with a small `max` fan-out and low-risk repositories before enabling organ
 - [Scheduled Agentic Work](scheduled-agentic-work.md)
 - [Repository Exploration](../playbooks/repository-exploration.md)
 - [Agent Workspace Lab](../playbooks/agent-workspace-lab.md)
+- [Agent Context Artifacts](../references/agent-context-artifacts.md)
 - [Repository Mental Model Tools](../references/repository-mental-model-tools.md)
 - [Grill With Docs](../skills/grill-with-docs.md)
 - [Configure Claude Code Hooks](../playbooks/configure-claude-code-hooks.md)
