@@ -128,6 +128,8 @@ The following table shows major concept relationships to ensure comprehensive cr
 | Scheduled Agentic Work | Pattern | Repository Mental Model Tools Reference | Support |
 | Scheduled Agentic Work | Pattern | Claude, Copilot, OpenCode, and GitHub Agentic Workflows | Harness variants |
 | Scheduled Agentic Work | Pattern | Skills README | Runtime portability |
+| TDD Goal Loop | Pattern | TDD Goal Loop Claude Spring Boot Lab | Runnable prototype |
+| TDD Goal Loop Claude Spring Boot Lab | Playbook | TDD Goal Loop Claude Adapter | Harness application |
 | Agent Context Artifacts | Reference | Context Management Pattern | Prerequisite |
 | Agent Context Artifacts | Reference | Skills README | Boundary definition |
 | Agent Context Artifacts | Reference | Repository Mental Model Tools Reference | Support |

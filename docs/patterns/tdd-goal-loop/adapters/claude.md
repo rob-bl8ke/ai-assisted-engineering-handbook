@@ -30,6 +30,10 @@ Claude Code built-in /goal evaluator decides whether to continue
 
 The custom `goal-evaluator` is advisory when using native `/goal`: it surfaces a structured judgment and evidence in the transcript. Claude Code's built-in `/goal` evaluator remains the final continuation authority unless you use a Stop hook, agent hook, or external controller.
 
+For token-efficient runs, treat verifier agents as optional adapters for verifier roles. If the main Claude turn or an external controller can run Maven and assert exit codes, test counts, and expected failure text, prefer deterministic checks over invoking `red-verifier`, `green-verifier`, or `slice-verifier` subagents.
+
+For well-specified features, a single Claude loop plus the deterministic gate should be the default. Use isolated `test-writer` and `code-writer` subagents as an escalation when ambiguous requirements or implementation-led testing risk justify the extra context cost.
+
 ---
 
 ## Subagent Files
@@ -77,6 +81,20 @@ Coordination modes:
 | External controller | You need the coordinator to be authoritative across turns | Controller or hook runs the coordinator logic outside native `/goal` |
 
 Default to the first mode unless you have verified nested delegation works in your Claude Code environment.
+
+Token-efficient mode:
+
+| Step | Claude Role | Deterministic Driver Role |
+|---|---|---|
+| Select slice | Usually driver from `lab/state.json`; use planner only when slice order is ambiguous | Read machine state and pass one criterion to the test writer |
+| Red | Test writer adds the test | Run Maven and assert the expected failure shape |
+| Green | Code writer implements minimal production code | Run Maven and assert success/regression counts |
+| Evidence | Driver appends facts | Keep prose evidence out of control flow |
+| Goal | Goal evaluator reviews full spec and evidence once | Stop or continue based on evaluator result |
+
+This mode preserves the important isolation between test writing, production implementation, and final evaluation while avoiding repeated cold-start reads by verifier agents.
+
+If you use a gate such as `lab/tdd-gate.sh`, give the gate its own self-test suite. Do not assume a passing gate is correct merely because it is deterministic; deterministic bugs become the new verifier risk.
 
 ---
 
@@ -375,14 +393,17 @@ Also return:
 
 - Use native `/goal` for convenience and session-native continuation.
 - Use a Stop hook, agent hook, or external controller when `goal-evaluator` must be the authoritative stop/continue decision.
-- Keep red/green verification granular; keep goal evaluation at slice or checkpoint boundaries.
+- Keep red/green verification granular; use deterministic checks for routine verification and keep goal evaluation at slice or checkpoint boundaries.
 - Do not treat `GREEN_CONFIRMED` as `GOAL_MET`. Passing tests prove the current behavior, not necessarily the whole goal.
+- Pass narrowed context into subagents instead of asking each one to rediscover the spec, evidence log, and slice sequence.
+- Default to one Claude loop plus a tested deterministic gate for precise requirements; escalate to isolated subagents when ambiguity makes test-author independence valuable.
 
 ---
 
 ## See Also
 
 - [TDD Goal Loop Pattern](../README.md) - Harness-agnostic core pattern.
+- [TDD Goal Loop Claude Spring Boot Lab](../../../playbooks/tdd-goal-loop-claude-spring-boot-lab.md) - Runnable Maven/Spring Boot lab that applies this adapter with Claude Code `/goal`.
 - [Goal Loop Claude Adapter](../../goal-loop/adapters/claude.md) - Native `/goal`, subagent orchestration, and stronger control options.
 - [Configure Claude Code Hooks](../../../playbooks/configure-claude-code-hooks.md) - Claude Code hook recipes for advisory checks and stronger control boundaries.
 - [Claude Code Hooks Adapter](../../../adapters/claude-code-hooks/README.md) - Organized hook example library.

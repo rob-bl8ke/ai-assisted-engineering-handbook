@@ -33,8 +33,10 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │
 │   ├── TDD Goal Loop
 │   │   ├── Depends on: Goal Loop, Test-Driven Development, Vertical Slicing, Tracer Bullets
-│   │   ├── Used in: AFK Implementation, Claude subagent orchestration
+│   │   ├── Used in: AFK Implementation, Claude subagent orchestration, deterministic TDD gates
 │   │   ├── Adapters: Claude
+│   │   ├── Lab: TDD Goal Loop Claude Spring Boot Lab
+│   │   ├── Recommends: single-loop default for well-specified features; isolated agents as escalation
 │   │   └── Related: Ralph Loop
 │   │
 │   ├── Ralph Loop
@@ -135,6 +137,13 @@ SOFTWARE DEVELOPMENT PROCESS
 │   │   ├── Produces: deterministic sample service, expected findings, harness comparison, fresh-clone proof
 │   │   └── Source: user-provided lab design
 │   │
+│   ├── TDD Goal Loop Claude Spring Boot Lab
+│   │   ├── Applies: TDD Goal Loop pattern
+│   │   ├── Applies: TDD Goal Loop Claude adapter
+│   │   ├── Uses: Maven, Spring Boot, Claude Code `/goal`, project subagents, deterministic gate, mutation testing
+│   │   ├── Produces: red evidence, green evidence, slice verification, goal evaluation, gate self-test lessons, isolation comparison
+│   │   └── Source: user-provided prototype lab request
+│   │
 │   ├── Review Implementation
 │   │   ├── Part of: Feature Development Process
 │   │   ├── Related: Investigate Bug playbook
@@ -227,15 +236,16 @@ SOFTWARE DEVELOPMENT PROCESS
 - [ ] **Status:** ✅ Added and linked during Goal Loop integration
 
 #### TDD Goal Loop Pattern
-- [ ] **File:** `docs/patterns/tdd-goal-loop/README.md`
-- [ ] **Provenance section exists** with sources documented
-- [ ] **Links to:** Goal Loop pattern (outer completion loop)
-- [ ] **Links to:** Test-Driven Development pattern (red/green discipline)
-- [ ] **Links to:** Vertical Slicing pattern (bounded unit of work)
-- [ ] **Links to:** Tracer Bullets pattern (minimal end-to-end behavior)
-- [ ] **Links to:** Ralph Loop pattern (broader autonomous implementation loop)
-- [ ] **Links to:** Claude adapter (harness-specific)
-- [ ] **Status:** ✅ Added and linked during TDD Goal Loop integration
+- [x] **File:** `docs/patterns/tdd-goal-loop/README.md`
+- [x] **Provenance section exists** with sources documented
+- [x] **Links to:** Goal Loop pattern (outer completion loop)
+- [x] **Links to:** Test-Driven Development pattern (red/green discipline)
+- [x] **Links to:** Vertical Slicing pattern (bounded unit of work)
+- [x] **Links to:** Tracer Bullets pattern (minimal end-to-end behavior)
+- [x] **Links to:** Ralph Loop pattern (broader autonomous implementation loop)
+- [x] **Links to:** Claude adapter (harness-specific)
+- [x] **Links to:** TDD Goal Loop Claude Spring Boot Lab playbook
+- [x] **Status:** ✅ Verified
 
 #### Ralph Loop Pattern
 - [ ] **File:** `docs/patterns/ralph-loop/README.md`
@@ -391,6 +401,19 @@ SOFTWARE DEVELOPMENT PROCESS
 - [x] **Documents:** Labs 0-15, deterministic sample target, `npx skills`, repository-owned skills, thin native agent wrappers, behavioural harness comparison, `skul`, `dotagents`, fresh-clone proof, clean-machine test, CI, `gh aw`, scheduled custodian graduation
 - [x] **Status:** ✅ Verified
 
+#### TDD Goal Loop Claude Spring Boot Lab Playbook
+- [x] **File:** `docs/playbooks/tdd-goal-loop-claude-spring-boot-lab.md`
+- [x] **Provenance section** documents user-provided lab request and Maven decision
+- [x] **Links to:** TDD Goal Loop pattern
+- [x] **Links to:** TDD Goal Loop Claude adapter
+- [x] **Links to:** Goal Loop pattern
+- [x] **Links to:** Test-Driven Development pattern
+- [x] **Links to:** Vertical Slicing pattern
+- [x] **Links to:** Tracer Bullets pattern
+- [x] **Links from:** TDD Goal Loop pattern, TDD Goal Loop Claude adapter, root README
+- [x] **Documents:** Maven/Spring Boot setup, `SPEC.md`, Claude subagent files, `/goal` prompt, expected slice sequence, evidence template, success criteria, troubleshooting, reset workflow, token-efficient deterministic control variant, gate self-testing, mutation-based isolation comparison
+- [x] **Status:** ✅ Verified
+
 ### Adapters
 
 #### Claude Code Hooks Adapter
@@ -525,9 +548,9 @@ SOFTWARE DEVELOPMENT PROCESS
 
 | Category | Total | Complete | Needs Update | Status |
 |----------|-------|----------|--------------|--------|
-| Patterns | 9 | 4 | 5 | ⚠️ In Progress |
+| Patterns | 9 | 5 | 4 | ⚠️ In Progress |
 | Processes | 1 | 0 | 1 | ⚠️ Needs Update |
-| Playbooks | 5 | 0 | 5 | ⚠️ Needs Update |
+| Playbooks | 6 | 1 | 5 | ⚠️ Needs Update |
 | Skills | 3 | 0 | 3 | ⚠️ Needs Update |
 | Principles | 2+ | 0 | 2+ | ⚠️ Needs Update |
 | References | 5 | 5 | 0 | ✅ Complete |

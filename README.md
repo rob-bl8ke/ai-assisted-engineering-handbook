@@ -85,6 +85,7 @@ I have work to do
   - [Configure Claude Code Hooks](docs/playbooks/configure-claude-code-hooks.md) — Add Claude Code guardrails, routing, and quality checks
   - [Sync Skills With Upstream Repositories](docs/playbooks/sync-skills-with-upstream.md) — Keep skills current with upstream repos through scheduled PRs
   - [Agent Workspace Lab](docs/playbooks/agent-workspace-lab.md) — Prove portable skills, agents, bootstrap, CI, and scheduled custodians
+  - [TDD Goal Loop Claude Spring Boot Lab](docs/playbooks/tdd-goal-loop-claude-spring-boot-lab.md) — Prove TDD Goal Loop orchestration with Claude Code, Maven, and Spring Boot
 - **[Skills](#skills)** — Executable AI capabilities and workflows
   - [Grill Me](docs/skills/grill-me.md) — Establish shared understanding through discovery
   - [Grill With Docs](docs/skills/grill-with-docs.md) — Combine grilling with domain docs and ADRs
@@ -230,7 +231,8 @@ ai-assisted-engineering-handbook/
 │   │   ├── investigate-bug.md — Find and fix bugs methodically
 │   │   ├── configure-claude-code-hooks.md — Configure Claude Code guardrails and workflow hooks
 │   │   ├── sync-skills-with-upstream.md — Keep skills current with upstream repository changes
-│   │   └── agent-workspace-lab.md — Prove portable skills, agents, bootstrap, CI, and scheduled custodians
+│   │   ├── agent-workspace-lab.md — Prove portable skills, agents, bootstrap, CI, and scheduled custodians
+│   │   └── tdd-goal-loop-claude-spring-boot-lab.md — Prove Claude TDD Goal Loop orchestration with Maven and Spring Boot
 │   ├── skills/
 │   │   ├── grill-me.md — Executable discovery specification
 │   │   ├── write-prd.md — Executable PRD writing specification
